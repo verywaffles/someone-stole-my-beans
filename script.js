@@ -14,6 +14,7 @@ const ACHIEVEMENTS = {
   endingChessMaster: "Grandmaster Bean",
   endingChessFail: "Checkmated",
   endingPawnEater: "Pawnivore",
+  waitLong: "That was NOT 6-8 months",
 
   endingAscension: "Ascended Bean",
   endingTranscend: "Transcendent",
