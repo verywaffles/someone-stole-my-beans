@@ -86,6 +86,17 @@ button {
   padding: 10px 20px;
   cursor: pointer;
 }
+#gameButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#gameButtons button {
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 
   opacity: 1;
   transform: scale(1.05);
