@@ -20,6 +20,15 @@ function unlockAchievement(endingId) {
     showAchievementPopup(ACHIEVEMENTS[endingId]);
   }
 }
+function showAchievementPopup(name) {
+  const popup = document.createElement("div");
+  popup.className = "achievement-popup";
+  popup.innerText = "Achievement Unlocked: " + name;
+
+  document.body.appendChild(popup);
+
+  setTimeout(() => popup.remove(), 3000);
+}
 
 fetch("story.json")
   .then(res => res.json())
