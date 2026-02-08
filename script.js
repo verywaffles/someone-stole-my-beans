@@ -10,7 +10,26 @@ const ACHIEVEMENTS = {
   endingGiveUp: "Gave Up",
   endingCompensation: "Compensated",
   endingQuest: "Granola Quest",
-  powPow: "Messed with the wrong neighbor"
+  powPow: "Messed with the wrong neighbor",
+  endingChessMaster: "Grandmaster Bean",
+  endingChessFail: "Checkmated",
+  endingPawnEater: "Pawnivore",
+
+  endingAscension: "Ascended Bean",
+  endingTranscend: "Transcendent",
+  endingShattered: "Reality Breaker",
+  endingOverlords: "Raccoon Overlord",
+
+  endingDelete: "Self-Deleted",
+  endingCursorAngry: "Cursor’s Wrath",
+  endingFifthWall: "Fifth Wall Breaker",
+  endingEscape: "Escaped the Game",
+
+  endingWizard: "Bean Wizard",
+  endingExplosion: "Spell Gone Wrong",
+  endingFamiliar: "Bean Tamer",
+  endingEatFamiliar: "Familiar Feast"
+
 };
 
 function unlockAchievement(endingId) {
