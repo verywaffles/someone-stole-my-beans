@@ -1,0 +1,264 @@
+{
+  "start": {
+    "text": "You wake up. Your beans are gone. The jar is empty. A single bean shell lies on the floor.",
+    "choices": [
+      { "label": "Investigate the neighbor", "next": "neighborDoor" },
+      { "label": "Follow the bean trail outside", "next": "forestPath" },
+      { "label": "Call the Bureau of Legumes & Lost Goods", "next": "bureauIntro" }
+    ]
+  },
+
+  "neighborDoor": {
+    "text": "You knock on your neighbor’s door. They open it just a crack. Their eyes dart around nervously.",
+    "choices": [
+      { "label": "Accuse them immediately", "next": "accuseNeighbor" },
+      { "label": "Offer them a granola bar as a bribe", "next": "bribeNeighbor" },
+      { "label": "Sneak into their backyard", "next": "backyardSneak" }
+    ]
+  },
+
+  "accuseNeighbor": {
+    "text": "You point dramatically. 'YOU stole my beans!' Your neighbor gasps. 'I would NEVER! But... I did see someone lurking around your house last night.'",
+    "choices": [
+      { "label": "Ask who they saw", "next": "neighborSaw" },
+      { "label": "Storm off dramatically", "next": "stormOff" }
+    ]
+  },
+
+  "neighborSaw": {
+    "text": "'It was... a raccoon. But not a normal one. This one wore a tiny bandana.'",
+    "choices": [
+      { "label": "Head to the forest", "next": "forestPath" },
+      { "label": "Ask more about the raccoon", "next": "raccoonLore" }
+    ]
+  },
+
+  "raccoonLore": {
+    "text": "Your neighbor whispers, 'They call him... The Bean Bandit. Leader of the Raccoon Syndicate.'",
+    "choices": [
+      { "label": "Go confront the syndicate", "next": "raccoonEncounter" },
+      { "label": "Pretend you’re not terrified", "next": "pretendBrave" }
+    ]
+  },
+
+  "pretendBrave": {
+    "text": "You puff out your chest. 'I fear no raccoon.' Your neighbor nods politely, clearly unconvinced.",
+    "choices": [
+      { "label": "Go to the forest anyway", "next": "forestPath" },
+      { "label": "Go home and rethink your life", "next": "endingCoward" }
+    ]
+  },
+
+  "stormOff": {
+    "text": "You storm off, but trip over a garden gnome. The neighbor watches silently.",
+    "choices": [
+      { "label": "Recover your dignity and continue", "next": "start" },
+      { "label": "Lie on the ground and give up", "next": "endingGiveUp" }
+    ]
+  },
+
+  "bribeNeighbor": {
+    "text": "You offer a granola bar. Your neighbor snatches it instantly. 'Okay fine, I DID see something. A trail of beans leading into the woods.'",
+    "choices": [
+      { "label": "Follow the trail", "next": "forestPath" },
+      { "label": "Ask why they’re so obsessed with granola bars", "next": "granolaLore" }
+    ]
+  },
+
+  "granolaLore": {
+    "text": "'I haven't eaten real food in days,' they whisper. 'The raccoons... they took everything.'",
+    "choices": [
+      { "label": "Team up with the neighbor", "next": "teamUp" },
+      { "label": "Go alone", "next": "forestPath" }
+    ]
+  },
+
+  "teamUp": {
+    "text": "Your neighbor grabs a broom. 'Let’s get your beans back.'",
+    "choices": [
+      { "label": "Charge into the forest together", "next": "raccoonEncounterTeam" }
+    ]
+  },
+
+  "backyardSneak": {
+    "text": "You sneak into their backyard. You find... a half‑eaten can of beans. Suspicious.",
+    "choices": [
+      { "label": "Confront them with the evidence", "next": "confrontBackyard" },
+      { "label": "Taste the beans (why?)", "next": "tasteBeans" }
+    ]
+  },
+
+  "confrontBackyard": {
+    "text": "Your neighbor panics. 'Okay fine! I stole ONE bean. But the rest? The raccoons took them!'",
+    "choices": [
+      { "label": "Accept their apology", "next": "start" },
+      { "label": "Demand compensation", "next": "endingCompensation" }
+    ]
+  },
+
+  "tasteBeans": {
+    "text": "You taste the beans. They are... raccoon‑flavored. You immediately regret everything.",
+    "choices": [
+      { "label": "Go to the forest", "next": "forestPath" },
+      { "label": "Sit down and cry", "next": "endingCry" }
+    ]
+  },
+
+  "forestPath": {
+    "text": "You follow the bean shells into the woods. Strange chittering echoes around you.",
+    "choices": [
+      { "label": "Investigate the sound", "next": "raccoonEncounter" },
+      { "label": "Turn back", "next": "start" }
+    ]
+  },
+
+  "raccoonEncounter": {
+    "text": "A raccoon wearing a tiny bandana steps out. 'So... you’ve come for your beans.'",
+    "choices": [
+      { "label": "Negotiate", "next": "negotiateRaccoon" },
+      { "label": "Fight", "next": "fightRaccoon" },
+      { "label": "Join the syndicate", "next": "joinSyndicate" }
+    ]
+  },
+
+  "raccoonEncounterTeam": {
+    "text": "You and your neighbor burst into the clearing. The raccoon bandit sighs. 'Two of you? Really?'",
+    "choices": [
+      { "label": "Let your neighbor handle it", "next": "neighborFight" },
+      { "label": "Handle it yourself", "next": "raccoonEncounter" }
+    ]
+  },
+
+  "neighborFight": {
+    "text": "Your neighbor charges with the broom. The raccoon sidesteps effortlessly. 'Pathetic,' it mutters.",
+    "choices": [
+      { "label": "Help your neighbor", "next": "fightRaccoon" },
+      { "label": "Run away", "next": "endingCoward" }
+    ]
+  },
+
+  "negotiateRaccoon": {
+    "text": "You sit down. The raccoon sits too. 'Your beans were delicious,' it admits. 'But perhaps we can strike a deal.'",
+    "choices": [
+      { "label": "Offer a trade", "next": "tradeOffer" },
+      { "label": "Demand your beans back", "next": "demandBeans" }
+    ]
+  },
+
+  "tradeOffer": {
+    "text": "'Bring me three granola bars,' the raccoon says. 'Then we talk.'",
+    "choices": [
+      { "label": "Agree to the deal", "next": "endingQuest" },
+      { "label": "Refuse", "next": "fightRaccoon" }
+    ]
+  },
+
+  "demandBeans": {
+    "text": "You demand your beans back. The raccoon laughs. 'Bold. I respect that.' It returns half the beans.",
+    "choices": [
+      { "label": "Accept the partial victory", "next": "endingHalfBeans" },
+      { "label": "Fight for the rest", "next": "fightRaccoon" }
+    ]
+  },
+
+  "fightRaccoon": {
+    "text": "You charge. The raccoon charges. It’s dramatic. It’s chaotic. It’s... surprisingly adorable.",
+    "choices": [
+      { "label": "Keep fighting", "next": "fightOutcome" },
+      { "label": "Retreat", "next": "endingCoward" }
+    ]
+  },
+
+  "fightOutcome": {
+    "text": "After a flurry of fur and fists, you stand victorious. The raccoon bows. 'You have earned your beans.'",
+    "choices": [
+      { "label": "Take your beans and go home", "next": "endingVictory" }
+    ]
+  },
+
+  "joinSyndicate": {
+    "text": "You kneel. 'Teach me your ways.' The raccoon nods. 'Welcome, Beanling.'",
+    "choices": [
+      { "label": "Accept your new life", "next": "endingSyndicate" }
+    ]
+  },
+
+  "bureauIntro": {
+    "text": "You arrive at the Bureau of Legumes & Lost Goods. A tired detective looks up. 'Another bean theft?'",
+    "choices": [
+      { "label": "File a report", "next": "fileReport" },
+      { "label": "Ask to see the bean database", "next": "beanDatabase" }
+    ]
+  },
+
+  "fileReport": {
+    "text": "You fill out 47 pages of paperwork. The detective stamps it. 'We’ll get back to you in 6–8 months.'",
+    "choices": [
+      { "label": "Cry", "next": "endingCry" },
+      { "label": "Go solve it yourself", "next": "start" }
+    ]
+  },
+
+  "beanDatabase": {
+    "text": "The detective sighs. 'Fine.' He opens a massive file labeled BEAN CRIMES.",
+    "choices": [
+      { "label": "Search for raccoon activity", "next": "bureauRaccoon" },
+      { "label": "Search for neighbor activity", "next": "bureauNeighbor" }
+    ]
+  },
+
+  "bureauRaccoon": {
+    "text": "The file is huge. The raccoon syndicate has been active for years.",
+    "choices": [
+      { "label": "Go to the forest", "next": "forestPath" }
+    ]
+  },
+
+  "bureauNeighbor": {
+    "text": "Your neighbor has 14 prior bean‑related incidents. Interesting.",
+    "choices": [
+      { "label": "Confront them", "next": "neighborDoor" }
+    ]
+  },
+
+  "endingVictory": {
+    "text": "ENDING: You defeated the raccoon and reclaimed your beans. You are now a legend.",
+    "choices": []
+  },
+
+  "endingHalfBeans": {
+    "text": "ENDING: You got half your beans back. Not perfect, but acceptable.",
+    "choices": []
+  },
+
+  "endingSyndicate": {
+    "text": "ENDING: You join the raccoon syndicate. You rise through the ranks. You become the Bean King.",
+    "choices": []
+  },
+
+  "endingCoward": {
+    "text": "ENDING: You ran away. The beans remain lost. The shame is eternal.",
+    "choices": []
+  },
+
+  "endingCry": {
+    "text": "ENDING: You sit down and cry. The forest watches silently.",
+    "choices": []
+  },
+
+  "endingGiveUp": {
+    "text": "ENDING: You give up entirely. The beans are gone forever.",
+    "choices": []
+  },
+
+  "endingCompensation": {
+    "text": "ENDING: Your neighbor gives you $3 as compensation. You buy new beans. Life goes on.",
+    "choices": []
+  },
+
+  "endingQuest": {
+    "text": "ENDING: You embark on a new quest to gather granola bars. The saga continues.",
+    "choices": []
+  }
+}
+
