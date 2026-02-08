@@ -71,6 +71,22 @@ button {
 }
 
 #achievementsButton:hover {
+#titleScreen {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#titleScreen h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#titleScreen button {
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
   opacity: 1;
   transform: scale(1.05);
 }
