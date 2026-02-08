@@ -334,211 +334,207 @@
     "choices": []
   },
 
-  "powPow": {
+    "powPow": {
     "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
     "choices": []
   },
-  
-"chessChallenge": {
-  "text": "A mysterious old man steps out of the bushes. 'Solve your bean problem? Beat me in chess.'",
-  "choices": [
-    { "label": "Accept the challenge", "next": "chessPlay" },
-    { "label": "Flip the chessboard and run", "next": "endingCoward" },
-    { "label": "Ask if raccoons play chess", "next": "chessLore" }
-  ]
-},
 
-"chessPlay": {
-  "text": "You sit at a stone table. The old man moves a pawn. Your beans depend on this.",
-  "choices": [
-    { "label": "Open with the Sicilian Defense", "next": "endingChessMaster" },
-    { "label": "Blunder your queen immediately", "next": "endingChessFail" },
-    { "label": "Eat a pawn (literally)", "next": "endingPawnEater" }
-  ]
-},
+  "chessChallenge": {
+    "text": "A mysterious old man steps out of the bushes. 'Solve your bean problem? Beat me in chess.'",
+    "choices": [
+      { "label": "Accept the challenge", "next": "chessPlay" },
+      { "label": "Flip the chessboard and run", "next": "endingCoward" },
+      { "label": "Ask if raccoons play chess", "next": "chessLore" }
+    ]
+  },
 
-"chessLore": {
-  "text": "'Raccoons? No. They prefer checkers,' the old man says. 'Weak creatures.'",
-  "choices": [
-    { "label": "Play chess anyway", "next": "chessPlay" },
-    { "label": "Go find raccoons who play checkers", "next": "raccoonEncounter" }
-  ]
-},
+  "chessPlay": {
+    "text": "You sit at a stone table. The old man moves a pawn. Your beans depend on this.",
+    "choices": [
+      { "label": "Open with the Sicilian Defense", "next": "endingChessMaster" },
+      { "label": "Blunder your queen immediately", "next": "endingChessFail" },
+      { "label": "Eat a pawn (literally)", "next": "endingPawnEater" }
+    ]
+  },
 
-"endingChessMaster": {
-  "text": "ENDING: You win flawlessly. The old man bows. 'You are the Bean Grandmaster now.'",
-  "choices": []
-},
+  "chessLore": {
+    "text": "'Raccoons? No. They prefer checkers,' the old man says. 'Weak creatures.'",
+    "choices": [
+      { "label": "Play chess anyway", "next": "chessPlay" },
+      { "label": "Go find raccoons who play checkers", "next": "raccoonEncounter" }
+    ]
+  },
 
-"endingChessFail": {
-  "text": "ENDING: You lose in four moves. The old man laughs for 17 minutes straight.",
-  "choices": []
-},
+  "endingChessMaster": {
+    "text": "ENDING: You win flawlessly. The old man bows. 'You are the Bean Grandmaster now.'",
+    "choices": []
+  },
 
-"endingPawnEater": {
-  "text": "ENDING: You eat a pawn. It tastes like regret. The old man faints.",
-  "choices": []
-},
+  "endingChessFail": {
+    "text": "ENDING: You lose in four moves. The old man laughs for 17 minutes straight.",
+    "choices": []
+  },
 
-"breakReality": {
-  "text": "You poke the air. A crack forms in reality. Light leaks out.",
-  "choices": [
-    { "label": "Step through the crack", "next": "voidEntrance" },
-    { "label": "Close the crack politely", "next": "start" },
-    { "label": "Widen the crack", "next": "realityShatter" }
-  ]
-},
+  "endingPawnEater": {
+    "text": "ENDING: You eat a pawn. It tastes like regret. The old man faints.",
+    "choices": []
+  },
 
-"voidEntrance": {
-  "text": "You enter the Void. A giant cosmic bean floats before you.",
-  "choices": [
-    { "label": "Speak to the bean", "next": "cosmicBeanTalk" },
-    { "label": "Eat the cosmic bean", "next": "endingAscension" }
-  ]
-},
+  "breakReality": {
+    "text": "You poke the air. A crack forms in reality. Light leaks out.",
+    "choices": [
+      { "label": "Step through the crack", "next": "voidEntrance" },
+      { "label": "Close the crack politely", "next": "start" },
+      { "label": "Widen the crack", "next": "realityShatter" }
+    ]
+  },
 
-"cosmicBeanTalk": {
-  "text": "The cosmic bean whispers: 'Your beans were never stolen. They transcended.'",
-  "choices": [
-    { "label": "Transcend with them", "next": "endingTranscend" },
-    { "label": "Reject enlightenment", "next": "start" }
-  ]
-},
+  "voidEntrance": {
+    "text": "You enter the Void. A giant cosmic bean floats before you.",
+    "choices": [
+      { "label": "Speak to the bean", "next": "cosmicBeanTalk" },
+      { "label": "Eat the cosmic bean", "next": "endingAscension" }
+    ]
+  },
 
-"realityShatter": {
-  "text": "Reality collapses. You float in a swirling storm of raccoons, beans, and unpaid taxes.",
-  "choices": [
-    { "label": "Accept your fate", "next": "endingShattered" },
-    { "label": "Try to rebuild reality", "next": "rebuildReality" }
-  ]
-},
+  "cosmicBeanTalk": {
+    "text": "The cosmic bean whispers: 'Your beans were never stolen. They transcended.'",
+    "choices": [
+      { "label": "Transcend with them", "next": "endingTranscend" },
+      { "label": "Reject enlightenment", "next": "start" }
+    ]
+  },
 
-"rebuildReality": {
-  "text": "You rebuild reality, but accidentally make raccoons the dominant species.",
-  "choices": [
-    { "label": "Bow to your new raccoon overlords", "next": "endingOverlords" },
-    { "label": "Reboot reality again", "next": "start" }
-  ]
-},
+  "realityShatter": {
+    "text": "Reality collapses. You float in a swirling storm of raccoons, beans, and unpaid taxes.",
+    "choices": [
+      { "label": "Accept your fate", "next": "endingShattered" },
+      { "label": "Try to rebuild reality", "next": "rebuildReality" }
+    ]
+  },
 
-"endingAscension": {
-  "text": "ENDING: You eat the cosmic bean and ascend to a higher plane. You become Bean Itself.",
-  "choices": []
-},
+  "rebuildReality": {
+    "text": "You rebuild reality, but accidentally make raccoons the dominant species.",
+    "choices": [
+      { "label": "Bow to your new raccoon overlords", "next": "endingOverlords" },
+      { "label": "Reboot reality again", "next": "start" }
+    ]
+  },
 
-"endingTranscend": {
-  "text": "ENDING: You transcend physical form. Your beans transcend with you. Perfect harmony.",
-  "choices": []
-},
+  "endingAscension": {
+    "text": "ENDING: You eat the cosmic bean and ascend to a higher plane. You become Bean Itself.",
+    "choices": []
+  },
 
-"endingShattered": {
-  "text": "ENDING: Reality shatters like glass. You drift forever in the Beanstorm.",
-  "choices": []
-},
+  "endingTranscend": {
+    "text": "ENDING: You transcend physical form. Your beans transcend with you. Perfect harmony.",
+    "choices": []
+  },
 
-"endingOverlords": {
-  "text": "ENDING: Raccoons rule the universe. You are appointed Royal Bean Advisor.",
-  "choices": []
-},
+  "endingShattered": {
+    "text": "ENDING: Reality shatters like glass. You drift forever in the Beanstorm.",
+    "choices": []
+  },
 
-"metaAwareness": {
-  "text": "You suddenly realize you're in a game. The text feels... scripted.",
-  "choices": [
-    { "label": "Look for the narrator", "next": "findNarrator" },
-    { "label": "Try to escape the game", "next": "escapeGame" },
-    { "label": "Delete the game from inside the game", "next": "endingDelete" }
-  ]
-},
+  "endingOverlords": {
+    "text": "ENDING: Raccoons rule the universe. You are appointed Royal Bean Advisor.",
+    "choices": []
+  },
 
-"findNarrator": {
-  "text": "You look up. A giant floating cursor hovers above you.",
-  "choices": [
-    { "label": "Talk to the cursor", "next": "cursorTalk" },
-    { "label": "Throw beans at it", "next": "endingCursorAngry" }
-  ]
-},
+  "metaAwareness": {
+    "text": "You suddenly realize you're in a game. The text feels... scripted.",
+    "choices": [
+      { "label": "Look for the narrator", "next": "findNarrator" },
+      { "label": "Try to escape the game", "next": "escapeGame" },
+      { "label": "Delete the game from inside the game", "next": "endingDelete" }
+    ]
+  },
 
-"cursorTalk": {
-  "text": "The cursor says: 'Stop breaking the fourth wall. I'm busy.'",
-  "choices": [
-    { "label": "Break the fifth wall instead", "next": "endingFifthWall" },
-    { "label": "Return to the story", "next": "start" }
-  ]
-},
+  "findNarrator": {
+    "text": "You look up. A giant floating cursor hovers above you.",
+    "choices": [
+      { "label": "Talk to the cursor", "next": "cursorTalk" },
+      { "label": "Throw beans at it", "next": "endingCursorAngry" }
+    ]
+  },
 
-"escapeGame": {
-  "text": "You run toward the edge of the screen. The world glitches.",
-  "choices": [
-    { "label": "Jump out of the window", "next": "endingEscape" },
-    { "label": "Stay inside the game", "next": "start" }
-  ]
-},
+  "cursorTalk": {
+    "text": "The cursor says: 'Stop breaking the fourth wall. I'm busy.'",
+    "choices": [
+      { "label": "Break the fifth wall instead", "next": "endingFifthWall" },
+      { "label": "Return to the story", "next": "start" }
+    ]
+  },
 
-"endingDelete": {
-  "text": "ENDING: You delete the game from within the game. Everything stops existing. Including you.",
-  "choices": []
-},
+  "escapeGame": {
+    "text": "You run toward the edge of the screen. The world glitches.",
+    "choices": [
+      { "label": "Jump out of the window", "next": "endingEscape" },
+      { "label": "Stay inside the game", "next": "start" }
+    ]
+  },
 
-"endingCursorAngry": {
-  "text": "ENDING: The cursor becomes angry and drags you into the settings menu forever.",
-  "choices": []
-},
+  "endingDelete": {
+    "text": "ENDING: You delete the game from within the game. Everything stops existing. Including you.",
+    "choices": []
+  },
 
-"endingFifthWall": {
-  "text": "ENDING: You break the fifth wall. Nobody knows what that means. You win by default.",
-  "choices": []
-},
+  "endingCursorAngry": {
+    "text": "ENDING: The cursor becomes angry and drags you into the settings menu forever.",
+    "choices": []
+  },
 
-"endingEscape": {
-  "text": "ENDING: You escape the game and appear on someone's desktop. They scream.",
-  "choices": []
-},
+  "endingFifthWall": {
+    "text": "ENDING: You break the fifth wall. Nobody knows what that means. You win by default.",
+    "choices": []
+  },
 
-"beanMagic": {
-  "text": "You discover an ancient spellbook titled 'Legumancy for Beginners'.",
-  "choices": [
-    { "label": "Cast a bean spell", "next": "castSpell" },
-    { "label": "Summon a bean familiar", "next": "beanFamiliar" }
-  ]
-},
+  "endingEscape": {
+    "text": "ENDING: You escape the game and appear on someone's desktop. They scream.",
+    "choices": []
+  },
 
-"castSpell": {
-  "text": "You cast BEANUS MAXIMUS. Something happens.",
-  "choices": [
-    { "label": "Hope it's good", "next": "endingWizard" },
-    { "label": "Panic", "next": "endingExplosion" }
-  ]
-},
+  "beanMagic": {
+    "text": "You discover an ancient spellbook titled 'Legumancy for Beginners'.",
+    "choices": [
+      { "label": "Cast a bean spell", "next": "castSpell" },
+      { "label": "Summon a bean familiar", "next": "beanFamiliar" }
+    ]
+  },
 
-"beanFamiliar": {
-  "text": "A tiny bean with legs appears. It salutes you.",
-  "choices": [
-    { "label": "Adopt it", "next": "endingFamiliar" },
-    { "label": "Eat it", "next": "endingEatFamiliar" }
-  ]
-},
+  "castSpell": {
+    "text": "You cast BEANUS MAXIMUS. Something happens.",
+    "choices": [
+      { "label": "Hope it's good", "next": "endingWizard" },
+      { "label": "Panic", "next": "endingExplosion" }
+    ]
+  },
 
-"endingWizard": {
-  "text": "ENDING: You become a Bean Wizard. Your power is immeasurable.",
-  "choices": []
-},
+  "beanFamiliar": {
+    "text": "A tiny bean with legs appears. It salutes you.",
+    "choices": [
+      { "label": "Adopt it", "next": "endingFamiliar" },
+      { "label": "Eat it", "next": "endingEatFamiliar" }
+    ]
+  },
 
-"endingExplosion": {
-  "text": "ENDING: The spell explodes. You are now slightly toasted.",
-  "choices": []
-},
+  "endingWizard": {
+    "text": "ENDING: You become a Bean Wizard. Your power is immeasurable.",
+    "choices": []
+  },
 
-"endingFamiliar": {
-  "text": "ENDING: You and your bean familiar go on adventures forever.",
-  "choices": []
-},
+  "endingExplosion": {
+    "text": "ENDING: The spell explodes. You are now slightly toasted.",
+    "choices": []
+  },
 
-"endingEatFamiliar": {
-  "text": "ENDING: You eat your bean familiar. It was crunchy. You monster.",
-  "choices": []
+  "endingFamiliar": {
+    "text": "ENDING: You and your bean familiar go on adventures forever.",
+    "choices": []
+  },
+
+  "endingEatFamiliar": {
+    "text": "ENDING: You eat your bean familiar. It was crunchy. You monster.",
+    "choices": []
+  }
 }
-}
-
-
-
-
