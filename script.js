@@ -1,5 +1,6 @@
 let story = {};
 let currentScene = "start";
+
 const ACHIEVEMENTS = {
   endingVictory: "Bean Hero",
   endingHalfBeans: "Halfway There",
@@ -10,6 +11,7 @@ const ACHIEVEMENTS = {
   endingCompensation: "Compensated",
   endingQuest: "Granola Quest"
 };
+
 function unlockAchievement(endingId) {
   let unlocked = JSON.parse(localStorage.getItem("achievements")) || {};
 
@@ -20,6 +22,7 @@ function unlockAchievement(endingId) {
     showAchievementPopup(ACHIEVEMENTS[endingId]);
   }
 }
+
 function showAchievementPopup(name) {
   const popup = document.createElement("div");
   popup.className = "achievement-popup";
@@ -28,6 +31,20 @@ function showAchievementPopup(name) {
   document.body.appendChild(popup);
 
   setTimeout(() => popup.remove(), 3000);
+}
+
+function openAchievements() {
+  let unlocked = JSON.parse(localStorage.getItem("achievements")) || {};
+
+  let message = "Achievements:\n\n";
+
+  for (let id in ACHIEVEMENTS) {
+    let name = ACHIEVEMENTS[id];
+    let hasIt = unlocked[id] ? "✔️" : "❌";
+    message += `${hasIt} ${name}\n`;
+  }
+
+  alert(message);
 }
 
 fetch("story.json")
@@ -40,6 +57,11 @@ fetch("story.json")
 function loadScene(sceneName) {
   const scene = story[sceneName];
   currentScene = sceneName;
+
+  // ⭐ Unlock achievement if this scene is an ending
+  if (ACHIEVEMENTS[sceneName]) {
+    unlockAchievement(sceneName);
+  }
 
   document.getElementById("text").innerText = scene.text;
 
