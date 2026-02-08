@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="style.css">
-  <title>Someone Stole My Beans</title>
-</head>
+<!-- GAME SCREEN -->
+<div id="gameScreen" style="display:none;">
+  <h1>Someone Stole My Beans</h1>
+  <p id="text"></p>
+  <div id="choices"></div>
 
-<body>
-
-  <!-- TITLE SCREEN -->
-  <div id="titleScreen">
-    <h1>Someone Stole My Beans</h1>
-    <button id="playButton">Play</button>
+  <div id="gameButtons">
+    <button id="achievementsButton" onclick="openAchievements()">🎉Achievements</button>
+    <button id="restartButton" onclick="restartGame()">⟳ Restart</button>
   </div>
+</div>
 
-  <!-- GAME SCREEN -->
-  <div id="gameScreen" style="display:none;">
-    <h1>Someone Stole My Beans</h1>
-    <p id="text"></p>
-    <div id="choices"></div>
-    <div id="gameButtons">
-  <button id="achievementsButton" onclick="openAchievements()">🎉Achievements</button>
-  <button id="restartButton" onclick="restartGame()">⟳ Restart</button>
-  </div>
-
-
-  <script src="script.js"></script>
-
-</body>
-</html>
