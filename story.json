@@ -22,6 +22,7 @@
     "choices": [
       { "label": "Ask who they saw", "next": "neighborSaw" },
       { "label": "Storm off dramatically", "next": "stormOff" }
+      { "label": "Throw a piece of bread at them (why not?)", "next": "breadFight"}
     ]
   },
 
@@ -57,6 +58,13 @@
     ]
   },
 
+  "breadFight": {
+    "text": "Your neighbor stares at you. 'What was that for? You wanna fight me?'"
+    "choices": [
+      { "label": "Throw another piece of bread at your neighbor", "next": "powPow"},
+      { "label": "Apologize and give him a granola bar", "next": "bribeNeighbor"},
+    ]
+  },
   "bribeNeighbor": {
     "text": "You offer a granola bar. Your neighbor snatches it instantly. 'Okay fine, I DID see something. A trail of beans leading into the woods.'",
     "choices": [
@@ -318,6 +326,10 @@
     "text": "ENDING: You embark on a new quest to gather granola bars. The saga continues.",
     "choices": []
   }
-}
-
+},
+  "powPow": {
+    "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
+    "choices": []
+  }
+},
 
