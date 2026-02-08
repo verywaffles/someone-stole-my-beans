@@ -240,36 +240,37 @@
       { "label": "Ignore the map", "next": "endingGiveUp" }
     ]
   },
+"fightOutcome": {
+  "text": "After a flurry of fur and fists, you stand victorious. The raccoon bows. 'You have earned your beans.'",
+  "choices": [
+    { "label": "Take your beans and go home", "next": "forgetPath" }
+  ]
+},
 
-  "fightOutcome": {
-    "text": "After a flurry of fur and fists, you stand victorious. The raccoon bows. 'You have earned your beans.'",
-    "choices": [
-      { "label": "Take your beans and go home", "next": "forgetPath" }
-    ]
-  },
-  "forgetPath": {
-    "text": "You have forgotten your way home.",
-    "choices": [
-      { "label": "Go left", "next": "dropBeans" },
-      { "label": "Go straight", "next": "dropBeans" },
-      { "label": "Go right", "next": "dropBeans" }
-    ]
-   },
-   "dropBeans": {
-     "text": "You trip over a piece of bread on the ground, and drop the jar of beans. You watch your beloved beans on the ground.",
-     "choices": [
-       { "label": "Sit down and cry", "next": "endingCry" },
-       { "label": "Taste the beans", "next": "fakeBeans" }
-     ]
-   },
-   "fakeBeans": {
-     "text": "You taste the beans. They taste like wax.",
-     "choices": [
-       { "label": "Confront the raccoon", "next": "raccoonEncounter" }
-     ]
-   },
-     
-    
+"forgetPath": {
+  "text": "You have forgotten your way home.",
+  "choices": [
+    { "label": "Go left", "next": "dropBeans" },
+    { "label": "Go straight", "next": "dropBeans" },
+    { "label": "Go right", "next": "dropBeans" }
+  ]
+},
+
+"dropBeans": {
+  "text": "You trip over a piece of bread on the ground, and drop the jar of beans. You watch your beloved beans scatter across the dirt.",
+  "choices": [
+    { "label": "Sit down and cry", "next": "endingCry" },
+    { "label": "Taste the beans", "next": "fakeBeans" }
+  ]
+},
+
+"fakeBeans": {
+  "text": "You taste the beans. They taste like wax. These aren't your beans at all.",
+  "choices": [
+    { "label": "Confront the raccoon", "next": "raccoonEncounter" }
+  ]
+},
+
       
   "joinSyndicate": {
     "text": "You kneel. 'Teach me your ways.' The raccoon nods. 'Welcome, Beanling.'",
