@@ -5,8 +5,8 @@ body {
   padding: 20px;
   text-align: center;
 
-  /* Warm yellowish background (like your original) */
-  background-color: #faf3d2;
+  /* warm yellow background */
+  background-color: #ffeaa7;
 }
 
 /* TITLE SCREEN */
@@ -22,18 +22,18 @@ body {
 #titleScreen button {
   font-size: 20px;
   padding: 10px 20px;
+  cursor: pointer;
 
-  /* Warm yellow-beige button style */
-  background-color: #f3e7b3;
-  border: 2px solid #d6c48a;
+  /* beige button */
+  background-color: #f5e6c8;
+  border: 2px solid #d1b892;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  cursor: pointer;
   transition: 0.15s;
 }
 
 #titleScreen button:hover {
-  background-color: #f7edc7;
+  background-color: #f8edd6;
 }
 
 /* GAME SCREEN */
@@ -60,16 +60,16 @@ body {
   width: 60%;
   cursor: pointer;
 
-  /* Same warm yellow-beige style */
-  background-color: #f3e7b3;
-  border: 2px solid #d6c48a;
+  /* beige button */
+  background-color: #f5e6c8;
+  border: 2px solid #d1b892;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   transition: 0.15s;
 }
 
 #choices button:hover {
-  background-color: #f7edc7;
+  background-color: #f8edd6;
 }
 
 /* ACHIEVEMENTS + RESTART BUTTON ROW */
@@ -85,15 +85,16 @@ body {
   padding: 8px 16px;
   cursor: pointer;
 
-  /* Same warm yellow-beige style */
-  background-color: #f3e7b3;
-  border: 2px solid #d6c48a;
+  /* same beige button style */
+  background-color: #f5e6c8;
+  border: 2px solid #d1b892;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   transition: 0.15s;
 }
 
 #gameButtons button:hover {
-  background-color: #f7edc7;
+  background-color: #f8edd6;
 }
+
 
