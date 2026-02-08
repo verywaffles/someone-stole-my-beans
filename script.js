@@ -9,8 +9,8 @@ const ACHIEVEMENTS = {
   endingCry: "Crybaby",
   endingGiveUp: "Gave Up",
   endingCompensation: "Compensated",
-  endingQuest: "Granola Quest"
-  powPow: "Messed with the wrong neighbor",
+  endingQuest: "Granola Quest",
+  powPow: "Messed with the wrong neighbor"
 };
 
 function unlockAchievement(endingId) {
