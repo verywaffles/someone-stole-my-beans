@@ -102,4 +102,8 @@ document.getElementById("playButton").onclick = () => {
   document.getElementById("gameScreen").style.display = "block";
   loadScene("start");
 };
+function restartGame() {
+  loadScene("start");
+}
+
 
