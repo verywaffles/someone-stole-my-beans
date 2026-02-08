@@ -318,8 +318,7 @@
     "text": "ENDING: You give up entirely. The beans are gone forever.",
     "choices": []
   },
-
-    "endingCompensation": {
+  "endingCompensation": {
     "text": "ENDING: Your neighbor gives you $3 as compensation. You buy new beans. Life goes on.",
     "choices": []
   },
@@ -328,6 +327,7 @@
     "text": "ENDING: You embark on a new quest to gather granola bars. The saga continues.",
     "choices": []
   },
+
   "powPow": {
     "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
     "choices": []
