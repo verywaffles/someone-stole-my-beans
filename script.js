@@ -10,6 +10,7 @@ const ACHIEVEMENTS = {
   endingGiveUp: "Gave Up",
   endingCompensation: "Compensated",
   endingQuest: "Granola Quest"
+  powPow: "Messed with the wrong neighbor",
 };
 
 function unlockAchievement(endingId) {
