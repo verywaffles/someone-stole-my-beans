@@ -1,5 +1,15 @@
 let story = {};
 let currentScene = "start";
+const ACHIEVEMENTS = {
+  endingVictory: "Bean Hero",
+  endingHalfBeans: "Halfway There",
+  endingSyndicate: "Bean King",
+  endingCoward: "Coward",
+  endingCry: "Crybaby",
+  endingGiveUp: "Gave Up",
+  endingCompensation: "Compensated",
+  endingQuest: "Granola Quest"
+};
 
 fetch("story.json")
   .then(res => res.json())
