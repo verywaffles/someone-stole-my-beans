@@ -96,5 +96,33 @@ body {
 #gameButtons button:hover {
   background-color: #f8edd6;
 }
+/* FIX: Move Achievements + Restart to bottom-right corner */
+#gameButtons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#gameButtons button {
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+
+  /* beige button style */
+  background-color: #f5e6c8;
+  border: 2px solid #d1b892;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: 0.15s;
+}
+
+#gameButtons button:hover {
+  background-color: #f8edd6;
+}
+
 
 
