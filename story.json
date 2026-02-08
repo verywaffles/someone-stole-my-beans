@@ -279,7 +279,7 @@
       { "label": "Search for raccoon activity", "next": "bureauRaccoon" },
       { "label": "Search for neighbor activity", "next": "bureauNeighbor" }
     ]
-  },
+   },
 
   "bureauRaccoon": {
     "text": "The file is huge. The raccoon syndicate has been active for years.",
