@@ -293,10 +293,14 @@
     "text": "You fill out 47 pages of paperwork. The detective stamps it. 'We’ll get back to you in 6–8 months.'",
     "choices": [
       { "label": "Cry", "next": "endingCry" },
-      { "label": "Go solve it yourself", "next": "start" }
+      { "label": "Go solve it yourself", "next": "start" },
+      { "label": "Wait the 6-8 months", "next": "waitLong"}
     ]
   },
-
+  "waitLong": {
+    "text": "ENDING: After 50 years without your beans, you get a phone call. The detective tells you that he will find your beans. Before you can respond, your fake teeth fall out of your mouth by accident, and you end up telling him absolute gibberish. The detective is offended, and hangs up.",
+    "choices": []
+  },
   "beanDatabase": {
     "text": "The detective sighs. 'Fine.' He opens a massive file labeled BEAN CRIMES.",
     "choices": [
