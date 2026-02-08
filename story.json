@@ -18,13 +18,14 @@
   },
 
   "accuseNeighbor": {
-    "text": "You point dramatically. 'YOU stole my beans!' Your neighbor gasps. 'I would NEVER! But... I did see someone lurking around your house last night.'",
-    "choices": [
-      { "label": "Ask who they saw", "next": "neighborSaw" },
-      { "label": "Storm off dramatically", "next": "stormOff" }
-      { "label": "Throw a piece of bread at them (why not?)", "next": "breadFight"}
-    ]
-  },
+  "text": "You point dramatically. 'YOU stole my beans!' Your neighbor gasps. 'I would NEVER! But... I did see someone lurking around your house last night.'",
+  "choices": [
+    { "label": "Ask who they saw", "next": "neighborSaw" },
+    { "label": "Storm off dramatically", "next": "stormOff" },
+    { "label": "Throw a piece of bread at them (why not?)", "next": "breadFight" }
+  ]
+},
+
 
   "neighborSaw": {
     "text": "'It was... a raccoon. But not a normal one. This one wore a tiny bandana.'",
@@ -59,12 +60,13 @@
   },
 
   "breadFight": {
-    "text": "Your neighbor stares at you. 'What was that for? You wanna fight me?'"
-    "choices": [
-      { "label": "Throw another piece of bread at your neighbor", "next": "powPow"},
-      { "label": "Apologize and give him a granola bar", "next": "bribeNeighbor"},
-    ]
-  },
+  "text": "Your neighbor stares at you. 'What was that for? You wanna fight me?'",
+  "choices": [
+    { "label": "Throw another piece of bread at your neighbor", "next": "powPow" },
+    { "label": "Apologize and give him a granola bar", "next": "bribeNeighbor" }
+  ]
+},
+
   "bribeNeighbor": {
     "text": "You offer a granola bar. Your neighbor snatches it instantly. 'Okay fine, I DID see something. A trail of beans leading into the woods.'",
     "choices": [
@@ -327,9 +329,10 @@
     "choices": []
   }
 },
-  "powPow": {
-    "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
-    "choices": []
-  }
-},
+"powPow": {
+  "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
+  "choices": []
+}
+}
+
 
