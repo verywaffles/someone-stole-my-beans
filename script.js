@@ -76,3 +76,9 @@ function loadScene(sceneName) {
     choicesDiv.appendChild(btn);
   });
 }
+document.getElementById("playButton").onclick = () => {
+  document.getElementById("titleScreen").style.display = "none";
+  document.getElementById("gameScreen").style.display = "block";
+  loadScene("start");
+};
+
