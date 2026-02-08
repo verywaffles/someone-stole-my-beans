@@ -52,7 +52,9 @@ fetch("story.json")
   .then(res => res.json())
   .then(data => {
     story = data;
-    loadScene(currentScene);
+    // Do NOT start the game automatically
+// loadScene(currentScene);
+
   });
 
 function loadScene(sceneName) {
