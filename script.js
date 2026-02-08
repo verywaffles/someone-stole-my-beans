@@ -10,6 +10,16 @@ const ACHIEVEMENTS = {
   endingCompensation: "Compensated",
   endingQuest: "Granola Quest"
 };
+function unlockAchievement(endingId) {
+  let unlocked = JSON.parse(localStorage.getItem("achievements")) || {};
+
+  if (!unlocked[endingId]) {
+    unlocked[endingId] = true;
+    localStorage.setItem("achievements", JSON.stringify(unlocked));
+
+    showAchievementPopup(ACHIEVEMENTS[endingId]);
+  }
+}
 
 fetch("story.json")
   .then(res => res.json())
