@@ -168,7 +168,7 @@
     { "label": "Retreat", "next": "endingCoward" },
     { "label": "Hesitate to realize that you are fighting a raccoon over beans instead of getting a job, getting married, or doing something better in life, until the raccoon punches you.", "next": "fightLose" }
   ]
-}
+},
 "fightLose": {
   "text": "The raccoon chitters triumphantly as you collapse onto the grass. Before you can get back up, he grabs your precious beans, stuffs them into a tiny backpack, and scurries off into the shadows.",
   "choices": [
