@@ -115,25 +115,25 @@
   },
 
   "forestPath": {
-    "text": "You follow the bean shells into the woods. Strange chittering echoes around you.",
-    "choices": [
-      { "label": "Investigate the sound", "next": "raccoonEncounter" },
-      { "label": "Turn back", "next": "start" }
-      { "label": "Follow a strange glowing crack in the air", "next": "breakReality" },
-      { "label": "Talk to the mysterious old man playing chess", "next": "chessChallenge" }
+  "text": "You follow the bean shells into the woods. Strange chittering echoes around you.",
+  "choices": [
+    { "label": "Investigate the sound", "next": "raccoonEncounter" },
+    { "label": "Turn back", "next": "start" },
+    { "label": "Follow a strange glowing crack in the air", "next": "breakReality" },
+    { "label": "Talk to the mysterious old man playing chess", "next": "chessChallenge" }
+  ]
+},
 
-    ]
-  },
 
   "raccoonEncounter": {
-    "text": "A raccoon wearing a tiny bandana steps out. 'So... you’ve come for your beans.'",
-    "choices": [
-      { "label": "Negotiate", "next": "negotiateRaccoon" },
-      { "label": "Fight", "next": "fightRaccoon" },
-      { "label": "Join the syndicate", "next": "joinSyndicate" }
-      { "label": "Ask the raccoon to wait for a minute and study ancient bean magic", "next": "beanMagic" }
-    ]
-  },
+  "text": "A raccoon wearing a tiny bandana steps out. 'So... you’ve come for your beans.'",
+  "choices": [
+    { "label": "Negotiate", "next": "negotiateRaccoon" },
+    { "label": "Fight", "next": "fightRaccoon" },
+    { "label": "Join the syndicate", "next": "joinSyndicate" },
+    { "label": "Ask the raccoon to wait for a minute and study ancient bean magic", "next": "beanMagic" }
+  ]
+},
 
   "raccoonEncounterTeam": {
     "text": "You and your neighbor burst into the clearing. The raccoon bandit sighs. 'Two of you? Really?'",
@@ -256,13 +256,14 @@
   },
 
   "bureauIntro": {
-    "text": "You arrive at the Bureau of Legumes & Lost Goods. A tired detective looks up. 'Another bean theft?'",
-    "choices": [
-      { "label": "File a report", "next": "fileReport" },
-      { "label": "Ask to see the bean database", "next": "beanDatabase" }
-      { "label": "Ask about classified bean anomalies", "next": "metaAwareness" }
-    ]
-  },
+  "text": "You arrive at the Bureau of Legumes & Lost Goods. A tired detective looks up. 'Another bean theft?'",
+  "choices": [
+    { "label": "File a report", "next": "fileReport" },
+    { "label": "Ask to see the bean database", "next": "beanDatabase" },
+    { "label": "Ask about classified bean anomalies", "next": "metaAwareness" }
+  ]
+},
+
 
   "fileReport": {
     "text": "You fill out 47 pages of paperwork. The detective stamps it. 'We’ll get back to you in 6–8 months.'",
@@ -337,8 +338,7 @@
     "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
     "choices": []
   }
-}
-,
+},
 "chessChallenge": {
   "text": "A mysterious old man steps out of the bushes. 'Solve your bean problem? Beat me in chess.'",
   "choices": [
