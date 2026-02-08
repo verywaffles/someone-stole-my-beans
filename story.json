@@ -162,71 +162,70 @@
   },
 
   "fightRaccoon": {
-  "text": "You charge. The raccoon charges. It’s dramatic. It’s chaotic. It’s... surprisingly adorable.",
-  "choices": [
-    { "label": "Keep fighting", "next": "fightOutcome" },
-    { "label": "Retreat", "next": "endingCoward" },
-    { "label": "Hesitate to realize that you are fighting a raccoon over beans instead of getting a job, getting married, or doing something better in life, until the raccoon punches you.", "next": "fightLose" }
-  ]
-},
-"fightLose": {
-  "text": "The raccoon chitters triumphantly as you collapse onto the grass. Before you can get back up, he grabs your precious beans, stuffs them into a tiny backpack, and scurries off into the shadows.",
-  "choices": [
-    { "label": "Follow the pawprints", "next": "followPawprints" },
-    { "label": "Search the neighborhood", "next": "searchNeighborhood" },
-    { "label": "Give up and go home", "next": "endingGiveUp" }
-  ]
-}
-"followPawprints": {
-  "text": "You follow a trail of tiny pawprints leading toward the old park. They stop near a suspicious-looking trash can.",
-  "choices": [
-    { "label": "Look inside the trash can", "next": "trashCan" },
-    { "label": "Search the park", "next": "parkSearch" }
-  ]
-}
-"followPawprints": {
-  "text": "You follow a trail of tiny pawprints leading toward the old park. They stop near a suspicious-looking trash can.",
-  "choices": [
-    { "label": "Look inside the trash can", "next": "trashCan" },
-    { "label": "Search the park", "next": "parkSearch" }
-  ]
-}
-"searchNeighborhood": {
-  "text": "You scan the neighborhood. A scrap of fabric from the raccoon's tiny backpack is stuck on a fence.",
-  "choices": [
-    { "label": "Climb the fence", "next": "fenceClimb" },
-    { "label": "Look for more clues", "next": "moreClues" }
-  ]
-}
-"trashCan": {
-  "text": "You peek inside the trash can. Two glowing raccoon eyes stare back. You close the lid immediately.",
-  "choices": [
-    { "label": "Back away slowly", "next": "endingCoward" },
-    { "label": "Open it again (why?)", "next": "endingCry" }
-  ]
-}
-"parkSearch": {
-  "text": "You search the park and find a tiny raccoon-sized footprint leading into a storm drain.",
-  "choices": [
-    { "label": "Enter the storm drain", "next": "endingSyndicate" },
-    { "label": "Turn back", "next": "start" }
-  ]
-}
-"fenceClimb": {
-  "text": "You climb the fence and land in someone's backyard. A raccoon stares at you from a tree branch, holding your beans mockingly.",
-  "choices": [
-    { "label": "Chase it", "next": "moreClues" },
-    { "label": "Retreat", "next": "endingCoward" }
-  ]
-}
-"moreClues": {
-  "text": "You find a tiny map drawn in crayon. It seems to show a raccoon hideout beneath the old playground.",
-  "choices": [
-    { "label": "Investigate the playground", "next": "parkSearch" },
-    { "label": "Ignore the map", "next": "endingGiveUp" }
-  ]
-}
+    "text": "You charge. The raccoon charges. It’s dramatic. It’s chaotic. It’s... surprisingly adorable.",
+    "choices": [
+      { "label": "Keep fighting", "next": "fightOutcome" },
+      { "label": "Retreat", "next": "endingCoward" },
+      { "label": "Hesitate to realize that you are fighting a raccoon over beans instead of getting a job, getting married, or doing something better in life, until the raccoon punches you.", "next": "fightLose" }
+    ]
+  },
 
+  "fightLose": {
+    "text": "The raccoon chitters triumphantly as you collapse onto the grass. Before you can get back up, he grabs your precious beans, stuffs them into a tiny backpack, and scurries off into the shadows.",
+    "choices": [
+      { "label": "Follow the pawprints", "next": "followPawprints" },
+      { "label": "Search the neighborhood", "next": "searchNeighborhood" },
+      { "label": "Give up and go home", "next": "endingGiveUp" }
+    ]
+  },
+
+  "followPawprints": {
+    "text": "You follow a trail of tiny pawprints leading toward the old park. They stop near a suspicious-looking trash can.",
+    "choices": [
+      { "label": "Look inside the trash can", "next": "trashCan" },
+      { "label": "Search the park", "next": "parkSearch" }
+    ]
+  },
+
+  "searchNeighborhood": {
+    "text": "You scan the neighborhood. A scrap of fabric from the raccoon's tiny backpack is stuck on a fence.",
+    "choices": [
+      { "label": "Climb the fence", "next": "fenceClimb" },
+      { "label": "Look for more clues", "next": "moreClues" }
+    ]
+  },
+
+  "trashCan": {
+    "text": "You peek inside the trash can. Two glowing raccoon eyes stare back. You close the lid immediately.",
+    "choices": [
+      { "label": "Back away slowly", "next": "endingCoward" },
+      { "label": "Open it again (why?)", "next": "endingCry" }
+    ]
+  },
+
+  "parkSearch": {
+    "text": "You search the park and find a tiny raccoon-sized footprint leading into a storm drain.",
+    "choices": [
+      { "label": "Enter the storm drain", "next": "endingSyndicate" },
+      { "label": "Turn back", "next": "start" }
+    ]
+  },
+
+  "fenceClimb": {
+    "text": "You climb the fence and land in someone's backyard. A raccoon stares at you from a tree branch, holding your beans mockingly.",
+    "choices": [
+      { "label": "Chase it", "next": "moreClues" },
+      { "label": "Retreat", "next": "endingCoward" }
+    ]
+  },
+
+  "moreClues": {
+    "text": "You find a tiny map drawn in crayon. It seems to show a raccoon hideout beneath the old playground.",
+    "choices": [
+      { "label": "Investigate the playground", "next": "parkSearch" },
+      { "label": "Ignore the map", "next": "endingGiveUp" }
+    ]
+  },
 
   "fightOutcome": {
     "text": "After a flurry of fur and fists, you stand victorious. The raccoon bows. 'You have earned your beans.'",
@@ -320,4 +319,5 @@
     "choices": []
   }
 }
+
 
