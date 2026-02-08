@@ -337,8 +337,8 @@
   "powPow": {
     "text": "ENDING: Your neighbor knows karate, and punches you in the face. You run away, and trip over a lawn gnome. You forget about your beans, and decide to never throw pieces of bread at your neighbor again.",
     "choices": []
-  }
-},
+  },
+  
 "chessChallenge": {
   "text": "A mysterious old man steps out of the bushes. 'Solve your bean problem? Beat me in chess.'",
   "choices": [
@@ -536,6 +536,7 @@
 "endingEatFamiliar": {
   "text": "ENDING: You eat your bean familiar. It was crunchy. You monster.",
   "choices": []
+}
 }
 
 
