@@ -163,4 +163,27 @@ button:hover {
   80% { opacity: 1; }
   100% { opacity: 0; }
 }
+/* ===============================
+   GENERIC FLOATING MENU WINDOWS
+=============================== */
+
+.menuWindow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7f2e8;
+  border: 2px solid #b08a52;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  z-index: 99999;
+}
+
+.menuWindow.open {
+  display: block;
+}
 
