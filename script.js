@@ -105,6 +105,9 @@ function loadScene(sceneName) {
     loadScene(choice.next);
   }
 };
+if (choice.requires && !hasItem(choice.requires)) {
+  return; // skip this choice
+}
 
     const btn = document.createElement("button");
     btn.innerText = choice.label;
