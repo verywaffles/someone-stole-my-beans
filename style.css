@@ -186,4 +186,53 @@ button:hover {
 .menuWindow.open {
   display: block;
 }
+/* ===============================
+   GENERIC FLOATING MENU WINDOWS
+=============================== */
+
+.menuWindow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7f2e8;
+  border: 2px solid #b08a52;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  z-index: 99999;
+}
+
+.menuWindow.open {
+  display: block;
+}
+
+/* ===============================
+   SKILL TREE
+=============================== */
+
+#skillTree {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill {
+  border: 2px solid #d1b892;
+  background-color: #f5e6c8;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.skill.unlocked {
+  border-color: #7abf4b;
+  background-color: #dff5d0;
+}
+
+.skill button {
+  margin-top: 5px;
+}
 
