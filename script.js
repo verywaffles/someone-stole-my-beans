@@ -93,28 +93,34 @@ function loadScene(sceneName) {
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
 
-  scene.choices.forEach(choice => {
-    btn.onclick = () => {
-  if (choice.item) {
-    addItem(choice.item);
+scene.choices.forEach(choice => {
+
+  // 1. Check item requirements FIRST
+  if (choice.requires && !hasItem(choice.requires)) {
+    return; // skip this choice
   }
 
-  if (ACHIEVEMENTS[choice.next]) {
-    goToEnding(choice.next);
-  } else {
-    loadScene(choice.next);
-  }
-};
-if (choice.requires && !hasItem(choice.requires)) {
-  return; // skip this choice
-}
+  // 2. Create the button
+  const btn = document.createElement("button");
+  btn.innerText = choice.label;
 
-    const btn = document.createElement("button");
-    btn.innerText = choice.label;
-    btn.onclick = () => loadScene(choice.next);
-    choicesDiv.appendChild(btn);
-  });
-}
+  // 3. Handle item rewards
+  btn.onclick = () => {
+    if (choice.item) {
+      addItem(choice.item);
+    }
+
+    if (ACHIEVEMENTS[choice.next]) {
+      goToEnding(choice.next);
+    } else {
+      loadScene(choice.next);
+    }
+  };
+
+  // 4. Add button to the page
+  choicesDiv.appendChild(btn);
+});
+
 document.getElementById("playButton").onclick = () => {
   document.getElementById("titleScreen").style.display = "none";
   document.getElementById("gameScreen").style.display = "block";
