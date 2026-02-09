@@ -120,7 +120,8 @@
     { "label": "Investigate the sound", "next": "raccoonEncounter" },
     { "label": "Turn back", "next": "start" },
     { "label": "Follow a strange glowing crack in the air", "next": "breakReality" },
-    { "label": "Talk to the mysterious old man playing chess", "next": "chessChallenge" }
+    { "label": "Talk to the mysterious old man playing chess", "next": "chessChallenge" },
+    { "label": "Look at that weird stool thingy which looks mysterious", "next": "inventoryTest"}
   ]
 },
 
