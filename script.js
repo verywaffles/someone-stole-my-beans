@@ -79,6 +79,7 @@ fetch("story.json")
   });
 
 function loadScene(sceneName) {
+  updateInventoryUI ();
   const scene = story[sceneName];
   currentScene = sceneName;
 
@@ -120,6 +121,16 @@ function removeItem(item) {
 
 function hasItem(item) {
   return inventory.includes(item);
+}
+function updateInventoryUI() {
+  const list = document.getElementById("inventoryList");
+  list.innerHTML = "";
+
+  inventory.forEach(item => {
+    const li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+  });
 }
 
 
