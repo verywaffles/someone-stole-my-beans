@@ -1,49 +1,99 @@
-/* GENERAL PAGE STYLING */
+/* ===============================
+   GLOBAL STYLES
+=============================== */
+
 body {
   font-family: Arial, sans-serif;
+  background-color: #f7f2e8;
   margin: 0;
-  padding: 20px;
-  text-align: center;
-
-  /* warm yellow background */
-  background-color: #ffeaa7;
+  padding: 0;
+  color: #333;
 }
 
-/* TITLE SCREEN */
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #d9b77c;
+  border: 2px solid #b08a52;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #e8c892;
+}
+
+#gameButtons button {
+  margin: 6px;
+}
+
+
+/* ===============================
+   TITLE SCREEN
+=============================== */
+
 #titleScreen {
+  text-align: center;
   margin-top: 100px;
 }
 
-#titleScreen h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+#playerSetup {
+  margin: 20px auto;
 }
 
-#titleScreen button {
-  font-size: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-
-  /* beige button */
-  background-color: #f5e6c8;
-  border: 2px solid #d1b892;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  transition: 0.15s;
+#playerSetup input,
+#playerSetup select {
+  padding: 6px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
 }
 
-#titleScreen button:hover {
-  background-color: #f8edd6;
+#saveSlots {
+  margin: 20px auto;
 }
 
-/* GAME SCREEN */
+.saveSlotButton {
+  display: inline-block;
+  margin: 5px;
+}
+
+
+/* ===============================
+   GAME SCREEN LAYOUT
+=============================== */
+
 #gameScreen {
-  margin-top: 40px;
+  padding: 20px;
 }
 
-#gameScreen h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#playerInfo span {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#mainLayout {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* LEFT SIDE: STORY AREA */
+#storyArea {
+  width: 65%;
+  padding-right: 20px;
 }
 
 #text {
@@ -51,67 +101,28 @@ body {
   margin-bottom: 20px;
 }
 
-/* CHOICE BUTTONS */
 #choices button {
   display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 18px;
-  width: 60%;
-  cursor: pointer;
-
-  /* beige button */
-  background-color: #f5e6c8;
-  border: 2px solid #d1b892;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  transition: 0.15s;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-#choices button:hover {
-  background-color: #f8edd6;
+
+/* RIGHT SIDE: PANELS */
+#sidePanels {
+  width: 35%;
 }
 
-/* ACHIEVEMENTS + RESTART BUTTONS (BOTTOM-RIGHT CORNER) */
-#gameButtons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+/* ===============================
+   INVENTORY PANEL
+=============================== */
 
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#gameButtons button {
-  font-size: 16px;
-  padding: 8px 16px;
-  cursor: pointer;
-
-  /* beige button */
-  background-color: #f5e6c8;
-  border: 2px solid #d1b892;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-  transition: 0.15s;
-}
-
-#gameButtons button:hover {
-  background-color: #f8edd6;
-}
 #inventoryPanel {
-  position: fixed;
-  top: 20px;
-  left: 20px;
   background-color: #f5e6c8;
   border: 2px solid #d1b892;
   padding: 10px;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-}
-
-#inventoryPanel h3 {
-  margin: 0 0 10px 0;
+  margin-bottom: 20px;
 }
 
 #inventoryList {
@@ -122,6 +133,104 @@ body {
 
 #inventoryList li {
   margin-bottom: 5px;
+}
+
+
+/* ===============================
+   SKILL TREE PANEL (future)
+=============================== */
+
+#skillTreePanel {
+  background-color: #e8f4e8;
+  border: 2px solid #9ac89a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+/* ===============================
+   LORE PANEL (future)
+=============================== */
+
+#lorePanel {
+  background-color: #e8e8f4;
+  border: 2px solid #9a9ac8;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+/* ===============================
+   MAP PANEL (future)
+=============================== */
+
+#mapPanel {
+  background-color: #f4e8e8;
+  border: 2px solid #c89a9a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+/* ===============================
+   MINI-GAME CONTAINER
+=============================== */
+
+#miniGameContainer {
+  background-color: #fff8d9;
+  border: 2px solid #d4c27a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+/* ===============================
+   SETTINGS MODAL
+=============================== */
+
+#settingsModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa;
+  border: 2px solid #aaa;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#settingsModal label {
+  display: block;
+  margin: 10px 0;
+}
+
+
+/* ===============================
+   ACHIEVEMENT POPUP
+=============================== */
+
+.achievement-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: gold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 2px solid #b08a00;
+  font-weight: bold;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 
