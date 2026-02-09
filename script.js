@@ -94,6 +94,18 @@ function loadScene(sceneName) {
   choicesDiv.innerHTML = "";
 
   scene.choices.forEach(choice => {
+    btn.onclick = () => {
+  if (choice.item) {
+    addItem(choice.item);
+  }
+
+  if (ACHIEVEMENTS[choice.next]) {
+    goToEnding(choice.next);
+  } else {
+    loadScene(choice.next);
+  }
+};
+
     const btn = document.createElement("button");
     btn.innerText = choice.label;
     btn.onclick = () => loadScene(choice.next);
