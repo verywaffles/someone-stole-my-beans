@@ -51,70 +51,70 @@
       <h3>Inventory</h3>
       <ul id="inventoryList"></ul>
     </div>
-<!-- SKILL TREE PANEL -->
-<div id="skillTreePanel" class="menuWindow">
-  <h3>Skill Tree</h3>
-  <div id="skillTree"></div>
-  <p id="skillPointsDisplay">Skill Points: 0</p>
-</div>
 
-<!-- BEANPEDIA PANEL -->
-<div id="lorePanel" class="menuWindow">
-  <h3>Beanpedia</h3>
-  <div id="loreContent">
-    <p>Select a category to view bean lore.</p>
-  </div>
-</div>
+    <!-- SKILL TREE PANEL -->
+    <div id="skillTreePanel" class="menuWindow">
+      <h3>Skill Tree</h3>
+      <div id="skillTree"></div>
+      <p id="skillPointsDisplay">Skill Points: 0</p>
+    </div>
 
-<!-- MAP PANEL -->
-<div id="mapPanel" class="menuWindow">
-  <h3>Map</h3>
-  <div id="mapContent">
-    <p>The world map will appear here.</p>
-  </div>
-</div>
+    <!-- BEANPEDIA PANEL -->
+    <div id="lorePanel" class="menuWindow">
+      <h3>Beanpedia</h3>
+      <div id="loreContent">
+        <p>Select a category to view bean lore.</p>
+      </div>
+    </div>
 
-<!-- CHAOS MODE PANEL -->
-<div id="chaosPanel" class="menuWindow">
-  <h3>Chaos Mode</h3>
-  <label><input type="checkbox" id="chaosRNG"> Randomize outcomes</label><br>
-  <label><input type="checkbox" id="chaosDoubleItems"> Double item drops</label><br>
-  <label><input type="checkbox" id="chaosHardcore"> Hardcore mode</label>
-</div>
+    <!-- MAP PANEL -->
+    <div id="mapPanel" class="menuWindow">
+      <h3>Map</h3>
+      <div id="mapContent">
+        <p>The world map will appear here.</p>
+      </div>
+    </div>
 
-<!-- CUSTOMIZE PANEL -->
-<div id="customizePanel" class="menuWindow">
-  <h3>Customize Character</h3>
-  <label>Name: <input type="text" id="customName"></label><br><br>
-  <label>Class:
-    <select id="customClass">
-      <option>Detective</option>
-      <option>Bean Wizard</option>
-      <option>Raccoon Whisperer</option>
-      <option>Bureau Agent</option>
-    </select>
-  </label>
-</div>
+    <!-- CHAOS MODE PANEL -->
+    <div id="chaosPanel" class="menuWindow">
+      <h3>Chaos Mode</h3>
+      <label><input type="checkbox" id="chaosRNG"> Randomize outcomes</label><br>
+      <label><input type="checkbox" id="chaosDoubleItems"> Double item drops</label><br>
+      <label><input type="checkbox" id="chaosHardcore"> Hardcore mode</label>
+    </div>
 
-<!-- SAVE PANEL -->
-<div id="savePanel" class="menuWindow">
-  <h3>Save Game</h3>
-  <p>Your game has been saved.</p>
-</div>
+    <!-- CUSTOMIZE PANEL -->
+    <div id="customizePanel" class="menuWindow">
+      <h3>Customize Character</h3>
+      <label>Name: <input type="text" id="customName"></label><br><br>
+      <label>Class:
+        <select id="customClass">
+          <option>Detective</option>
+          <option>Bean Wizard</option>
+          <option>Raccoon Whisperer</option>
+          <option>Bureau Agent</option>
+        </select>
+      </label>
+    </div>
 
-<!-- LOAD PANEL -->
-<div id="loadPanel" class="menuWindow">
-  <h3>Load Game</h3>
-  <p>Your game has been loaded.</p>
-</div>
+    <!-- SAVE PANEL -->
+    <div id="savePanel" class="menuWindow">
+      <h3>Save Game</h3>
+      <p>Your game has been saved.</p>
+    </div>
 
-<!-- SETTINGS PANEL -->
-<div id="settingsPanel" class="menuWindow">
-  <h3>Settings</h3>
-  <label><input type="checkbox" id="settingDarkMode"> Dark Mode</label><br>
-  <label><input type="checkbox" id="settingBigText"> Large Text</label>
-</div>
+    <!-- LOAD PANEL -->
+    <div id="loadPanel" class="menuWindow">
+      <h3>Load Game</h3>
+      <p>Your game has been loaded.</p>
+    </div>
 
+    <!-- SETTINGS PANEL -->
+    <div id="settingsPanel" class="menuWindow">
+      <h3>Settings</h3>
+      <label><input type="checkbox" id="settingDarkMode"> Dark Mode</label><br>
+      <label><input type="checkbox" id="settingBigText"> Large Text</label>
+    </div>
 
     <!-- FLOATING MENU BUTTON -->
     <button id="menuToggle">☰ Menu</button>
@@ -135,7 +135,10 @@
     <button id="achievementsButton" onclick="openAchievements()">🎉 Achievements</button>
 
   </div>
-<script src="script.js"></script>
+
+  <!-- SCRIPT AT THE VERY BOTTOM (IMPORTANT!) -->
+  <script src="script.js"></script>
+
 </body>
 </html>
 
