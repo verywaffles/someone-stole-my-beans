@@ -132,7 +132,6 @@ function loadScene(sceneName) {
   const scene = story[sceneName];
   currentScene = sceneName;
 
-  // If this scene is an ending, unlock achievement
   if (ACHIEVEMENTS[sceneName]) {
     unlockAchievement(sceneName);
   }
@@ -143,23 +142,14 @@ function loadScene(sceneName) {
   choicesDiv.innerHTML = "";
 
   scene.choices.forEach(choice => {
-
-    // Hide choices requiring items the player doesn't have
-    if (choice.requires && !hasItem(choice.requires)) {
-      return;
-    }
+    if (choice.requires && !hasItem(choice.requires)) return;
 
     const btn = document.createElement("button");
     btn.innerText = choice.label;
 
     btn.onclick = () => {
+      if (choice.item) addItem(choice.item);
 
-      // Give item if this choice grants one
-      if (choice.item) {
-        addItem(choice.item);
-      }
-
-      // If next is an ending, handle ending
       if (ACHIEVEMENTS[choice.next]) {
         goToEnding(choice.next);
       } else {
@@ -207,16 +197,75 @@ document.getElementById("playButton").onclick = () => {
 function restartGame() {
   loadScene("start");
 }
-// COLLAPSIBLE MENU
+
+
+// ===============================
+// MENU + INVENTORY PANEL TOGGLES
+// ===============================
 document.addEventListener("DOMContentLoaded", () => {
+
+  // MENU PANEL
   const menuToggle = document.getElementById("menuToggle");
   const menuPanel = document.getElementById("menuPanel");
 
-  if (menuToggle && menuPanel) {
-    menuToggle.addEventListener("click", () => {
-      menuPanel.classList.toggle("open");
-    });
-  }
+  menuToggle.addEventListener("click", () => {
+    menuPanel.classList.toggle("open");
+  });
+
+  // INVENTORY PANEL
+  const inventoryToggle = document.getElementById("inventoryToggle");
+  const inventoryPanel = document.getElementById("inventoryPanel");
+
+  inventoryToggle.addEventListener("click", () => {
+    inventoryPanel.classList.toggle("open");
+  });
+
+
+  // ===============================
+  // MENU BUTTON ACTIONS
+  // ===============================
+
+  document.getElementById("skillTreeButton").onclick = () => {
+    alert("Skill Tree coming soon!");
+  };
+
+  document.getElementById("loreButton").onclick = () => {
+    alert("Beanpedia coming soon!");
+  };
+
+  document.getElementById("mapButton").onclick = () => {
+    alert("Map coming soon!");
+  };
+
+  document.getElementById("chaosButton").onclick = () => {
+    alert("Chaos Mode toggled!");
+  };
+
+  document.getElementById("customizeButton").onclick = () => {
+    alert("Character customization coming soon!");
+  };
+
+  document.getElementById("saveButton").onclick = () => {
+    localStorage.setItem("saveData", JSON.stringify({
+      scene: currentScene,
+      inventory: inventory
+    }));
+    alert("Game saved!");
+  };
+
+  document.getElementById("loadButton").onclick = () => {
+    const data = JSON.parse(localStorage.getItem("saveData"));
+    if (!data) return alert("No save found!");
+
+    inventory = data.inventory;
+    loadScene(data.scene);
+    alert("Game loaded!");
+  };
+
+  document.getElementById("settingsButton").onclick = () => {
+    alert("Settings coming soon!");
+  };
+
 });
 
 
