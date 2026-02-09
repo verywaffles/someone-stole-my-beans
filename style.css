@@ -30,8 +30,32 @@ button:hover {
   background-color: #e8c892;
 }
 
-#gameButtons button {
-  margin: 6px;
+
+/* ===============================
+   TITLE SCREEN
+=============================== */
+
+#titleScreen {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#playerSetup {
+  margin: 20px auto;
+}
+
+#playerSetup input: #d9b77c;
+  border: 2px solid #b08a52;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #e8c892;
 }
 
 
@@ -52,7 +76,16 @@ button:hover {
 #playerSetup select {
   padding: 6px;
   margin: 5px;
+  border-radius:,
+#playerSetup select {
+  padding: 6px;
+  margin: 5px;
   border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+#saveSlots {
+ 4px;
   border: 1px solid #aaa;
 }
 
@@ -67,11 +100,47 @@ button:hover {
 
 
 /* ===============================
+    margin: 20px auto;
+}
+
+.saveSlotButton {
+  display: inline-block;
+  margin: 5px;
+}
+
+
+/* ===============================
    GAME SCREEN LAYOUT
 =============================== */
 
+ GAME SCREEN LAYOUT
+=============================== */
+
 #gameScreen {
+  padding#gameScreen {
   padding: 20px;
+  padding: 20px;
+  padding-bottom: 120px; /* space for bottom bar */
+  min-height-bottom: 120px; /* space for bottom bar */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#playerInfo span {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#mainLayout {
+  display: flex;
+  margin: 100vh;
+  box-sizing: border-box;
 }
 
 #topBar {
@@ -90,10 +159,21 @@ button:hover {
   margin-top: 20px;
 }
 
-/* LEFT SIDE: STORY AREA */
+/-top: 20px;
+}
+
+/* LEFT SIDE: STORY* LEFT SIDE: STORY AREA */
+#storyArea AREA */
 #storyArea {
   width: 65%;
-  padding-right: 20px;
+ {
+  width: 65%;
+  padding-right:  padding-right: 20px;
+}
+
+#text {
+  font-size: 20px;
+  margin-bottom 20px;
 }
 
 #text {
@@ -108,10 +188,32 @@ button:hover {
 }
 
 
+/* RIGHT SIDE: PAN: 20px;
+}
+
+#choices button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
 /* RIGHT SIDE: PANELS */
 #sidePanels {
   width: 35%;
 }
+
+
+/* ===============================
+   INVENTORY PANEL
+=============================== */
+
+#inventoryPanel {
+  background-colorELS */
+#sidePanels {
+  width: 35%;
+}
+
 
 /* ===============================
    INVENTORY PANEL
@@ -121,8 +223,15 @@ button:hover {
   background-color: #f5e6c8;
   border: 2px solid #d1b892;
   padding: 10px;
+  border-radius: #f5e6c8;
+  border: 2px solid #d1b892;
+  padding: 10px;
   border-radius: 6px;
+  margin-bottom: 6px;
   margin-bottom: 20px;
+}
+
+#inventory: 20px;
 }
 
 #inventoryList {
@@ -137,12 +246,40 @@ button:hover {
 
 
 /* ===============================
+   SKILL TREE PANELList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#inventoryList li {
+  margin-bottom: 5px;
+}
+
+
+/* ===============================
    SKILL TREE PANEL (future)
+================ (future)
 =============================== */
+
+=============== */
 
 #skillTreePanel {
   background-color: #e8f4e8;
+  border: 2px solid #9ac#skillTreePanel {
+  background-color: #e8f4e8;
   border: 2px solid #9ac89a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+/* ===============================
+   LORE PANEL (future)
+=============================== */
+
+89a;
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 20px;
@@ -157,7 +294,21 @@ button:hover {
   background-color: #e8e8f4;
   border: 2px solid #9a9ac8;
   padding: 10px;
+  border#lorePanel {
+  background-color: #e8e8f4;
+  border: 2px solid #9a9ac8;
+  padding: 10px;
   border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+
+/* ===============================
+   MAP PANEL (future)
+=============================== */
+
+#mapPanel {
+  background-radius: 6px;
   margin-bottom: 20px;
 }
 
@@ -171,7 +322,16 @@ button:hover {
   border: 2px solid #c89a9a;
   padding: 10px;
   border-radius: 6px;
+  margin-color: #f4e8e8;
+  border: 2px solid #c89a9a;
+  padding: 10px;
+  border-radius: 6px;
   margin-bottom: 20px;
+}
+
+
+/* ===============================
+  -bottom: 20px;
 }
 
 
@@ -179,7 +339,24 @@ button:hover {
    MINI-GAME CONTAINER
 =============================== */
 
-#miniGameContainer {
+ MINI-GAME CONTAINER
+=============================== */
+
+#miniGameContainer#miniGameContainer {
+  background-color: #fff8d9;
+  border: 2px solid #d4c27a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+/* ===============================
+   SETTINGS MODAL
+=============================== */
+
+#settingsModal {
+ {
   background-color: #fff8d9;
   border: 2px solid #d4c27a;
   padding: 20px;
@@ -196,9 +373,18 @@ button:hover {
   position: fixed;
   top: 50%;
   left: 50%;
+  transform: translate(-50%,  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  background -50%);
   background-color: #fafafa;
+-color: #fafafa;
   border: 2px solid #aaa;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow  border: 2px solid #aaa;
   padding: 20px;
   border-radius: 8px;
   width: 300px;
@@ -212,14 +398,74 @@ button:hover {
 
 
 /* ===============================
+  : 0 0 10px rgba(0,0,0,0.3);
+}
+
+#settingsModal label {
+  display: block;
+  margin: 10px 0;
+}
+
+
+/* ===============================
+   BOTTOM BUTTON BAR (FIXED)
+=============================== */
+
+#gameButtons {
+  position: fixed;
+  bottom: 0;
+  BOTTOM BUTTON BAR (FIXED)
+=============================== */
+
+#gameButtons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(247, 242, 232, 0.95);
+  border-top: left: 0;
+  width: 100%;
+  background-color: rgba(247, 242, 232, 0.95);
+  border-top: 2px solid #d1b892;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  z-index 2px solid #d1b892;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  z-index: 9999;
+}
+
+
+/* ===============================
    ACHIEVEMENT POPUP
 =============================== */
 
 .achievement-popup {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px: 9999;
+}
+
+
+/* ===============================
+   ACHIEVEMENT POPUP
+=============================== */
+
+.achievement-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+;
   right: 20px;
   background-color: gold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 2px solid #b08a00;
+  font-weight: bold;
+  animation  background-color: gold;
   padding: 12px 20px;
   border-radius: 6px;
   border: 2px solid #b08a00;
@@ -227,11 +473,13 @@ button:hover {
   animation: fadeOut 3s forwards;
 }
 
+@keyframes fade: fadeOut 3s forwards;
+}
+
 @keyframes fadeOut {
   0% { opacity: 1; }
   80% { opacity: 1; }
   100% { opacity: 0; }
 }
-
 
 
