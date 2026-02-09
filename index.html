@@ -12,15 +12,9 @@
   <div id="titleScreen">
     <h1>Someone Stole My Beans</h1>
 
-    <!-- Player customization (basic) -->
     <div id="playerSetup">
-      <label>
-        Name:
-        <input type="text" id="playerNameInput" placeholder="Bean Seeker">
-      </label>
-
-      <label>
-        Class:
+      <label>Name: <input type="text" id="playerNameInput" placeholder="Bean Seeker"></label>
+      <label>Class:
         <select id="playerClassSelect">
           <option value="detective">Detective</option>
           <option value="wizard">Bean Wizard</option>
@@ -30,80 +24,39 @@
       </label>
     </div>
 
-    <!-- Save slot selection (future) -->
-    <div id="saveSlots">
-      <h3>Save Slots</h3>
-      <button class="saveSlotButton" data-slot="1">Slot 1</button>
-      <button class="saveSlotButton" data-slot="2">Slot 2</button>
-      <button class="saveSlotButton" data-slot="3">Slot 3</button>
-    </div>
-
     <button id="playButton">Play</button>
   </div>
 
   <!-- GAME SCREEN -->
   <div id="gameScreen" style="display:none;">
 
-    <!-- Top bar: title + quick info -->
-    <div id="topBar">
-      <h1>Someone Stole My Beans</h1>
-      <div id="playerInfo">
-        <span id="playerNameDisplay"></span>
-        <span id="playerClassDisplay"></span>
-      </div>
-    </div>
+    <h1>Someone Stole My Beans</h1>
 
-    <!-- MAIN CONTENT AREA -->
     <div id="mainLayout">
 
-      <!-- LEFT: TEXT + CHOICES -->
+      <!-- STORY AREA -->
       <div id="storyArea">
         <p id="text"></p>
         <div id="choices"></div>
+        <button id="restartButton" onclick="restartGame()">⟳ Restart</button>
       </div>
 
-      <!-- RIGHT: PANELS -->
-      <div id="sidePanels">
-
-        <!-- INVENTORY PANEL -->
-        <div id="inventoryPanel">
-          <h3>Inventory</h3>
-          <ul id="inventoryList"></ul>
-        </div>
-
-        <!-- SKILL TREE PANEL (future) -->
-        <div id="skillTreePanel" style="display:none;">
-          <h3>Skill Tree</h3>
-          <div id="skillTreeContent">
-            <!-- skills will be rendered here -->
-          </div>
-        </div>
-
-        <!-- LORE / BEANPEDIA PANEL (future) -->
-        <div id="lorePanel" style="display:none;">
-          <h3>Beanpedia</h3>
-          <ul id="loreList">
-            <!-- unlocked lore entries -->
-          </ul>
-        </div>
-
-        <!-- MAP / EXPLORATION PANEL (future) -->
-        <div id="mapPanel" style="display:none;">
-          <h3>Map</h3>
-          <div id="mapContent">
-            <!-- locations / nodes -->
-          </div>
-        </div>
-
-      </div>
     </div>
 
-    <!-- BOTTOM BUTTONS -->
-    <div id="gameButtons">
-      <button onclick="openAchievements()">🎉 Achievements</button>
-      <button onclick="restartGame()">⟳ Restart</button>
+    <!-- FLOATING INVENTORY BUTTON -->
+    <button id="inventoryToggle">📦 Inventory</button>
 
-      <!-- FUTURE SYSTEM BUTTONS -->
+    <!-- INVENTORY PANEL -->
+    <div id="inventoryPanel">
+      <h3>Inventory</h3>
+      <ul id="inventoryList"></ul>
+    </div>
+
+    <!-- FLOATING MENU BUTTON -->
+    <button id="menuToggle">☰ Menu</button>
+
+    <!-- MENU PANEL -->
+    <div id="menuPanel">
       <button id="skillTreeButton">🌿 Skill Tree</button>
       <button id="loreButton">📘 Beanpedia</button>
       <button id="mapButton">🗺️ Map</button>
@@ -114,31 +67,8 @@
       <button id="settingsButton">⚙️ Settings</button>
     </div>
 
-    <!-- MINI-GAME AREA (future) -->
-    <div id="miniGameContainer" style="display:none;">
-      <h2>Mini-Game</h2>
-      <div id="miniGameContent"></div>
-      <button onclick="closeMiniGame()">Close</button>
-    </div>
-
-    <!-- SETTINGS MODAL (future) -->
-    <div id="settingsModal" style="display:none;">
-      <h2>Settings</h2>
-      <label>
-        Text Speed:
-        <input type="range" id="textSpeedSlider" min="1" max="5" value="3">
-      </label>
-      <label>
-        Theme:
-        <select id="themeSelect">
-          <option value="default">Default</option>
-          <option value="dark">Dark</option>
-          <option value="void">Cosmic Void</option>
-          <option value="bureau">Bureau File</option>
-        </select>
-      </label>
-      <button id="closeSettingsButton">Close</button>
-    </div>
+    <!-- ACHIEVEMENTS BUTTON -->
+    <button id="achievementsButton" onclick="openAchievements()">🎉 Achievements</button>
 
   </div>
 
@@ -146,5 +76,6 @@
 
 </body>
 </html>
+
 
 
