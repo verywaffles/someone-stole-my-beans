@@ -203,6 +203,51 @@ function restartGame() {
 // MENU + INVENTORY PANEL TOGGLES
 // ===============================
 document.addEventListener("DOMContentLoaded", () => {
+function togglePanel(id) {
+  document.querySelectorAll(".menuWindow").forEach(p => p.classList.remove("open"));
+  const panel = document.getElementById(id);
+  panel.classList.toggle("open");
+}
+
+// SKILL TREE
+document.getElementById("skillTreeButton").onclick = () => {
+  togglePanel("skillTreePanel");
+};
+
+// BEANPEDIA
+document.getElementById("loreButton").onclick = () => {
+  togglePanel("lorePanel");
+};
+
+// MAP
+document.getElementById("mapButton").onclick = () => {
+  togglePanel("mapPanel");
+};
+
+// CHAOS MODE
+document.getElementById("chaosButton").onclick = () => {
+  togglePanel("chaosPanel");
+};
+
+// CUSTOMIZE
+document.getElementById("customizeButton").onclick = () => {
+  togglePanel("customizePanel");
+};
+
+// SAVE
+document.getElementById("saveButton").onclick = () => {
+  togglePanel("savePanel");
+};
+
+// LOAD
+document.getElementById("loadButton").onclick = () => {
+  togglePanel("loadPanel");
+};
+
+// SETTINGS
+document.getElementById("settingsButton").onclick = () => {
+  togglePanel("settingsPanel");
+};
 
   // MENU PANEL
   const menuToggle = document.getElementById("menuToggle");
