@@ -54,50 +54,67 @@
 <!-- SKILL TREE PANEL -->
 <div id="skillTreePanel" class="menuWindow">
   <h3>Skill Tree</h3>
-  <p>Coming soon — choose your bean‑based powers.</p>
+  <div id="skillTree"></div>
+  <p id="skillPointsDisplay">Skill Points: 0</p>
 </div>
 
 <!-- BEANPEDIA PANEL -->
 <div id="lorePanel" class="menuWindow">
   <h3>Beanpedia</h3>
-  <p>All known bean lore will appear here.</p>
+  <div id="loreContent">
+    <p>Select a category to view bean lore.</p>
+  </div>
 </div>
 
 <!-- MAP PANEL -->
 <div id="mapPanel" class="menuWindow">
   <h3>Map</h3>
-  <p>The world map will go here.</p>
+  <div id="mapContent">
+    <p>The world map will appear here.</p>
+  </div>
 </div>
 
 <!-- CHAOS MODE PANEL -->
 <div id="chaosPanel" class="menuWindow">
   <h3>Chaos Mode</h3>
-  <p>Toggle chaos modifiers here.</p>
+  <label><input type="checkbox" id="chaosRNG"> Randomize outcomes</label><br>
+  <label><input type="checkbox" id="chaosDoubleItems"> Double item drops</label><br>
+  <label><input type="checkbox" id="chaosHardcore"> Hardcore mode</label>
 </div>
 
 <!-- CUSTOMIZE PANEL -->
 <div id="customizePanel" class="menuWindow">
-  <h3>Customize</h3>
-  <p>Character customization will go here.</p>
+  <h3>Customize Character</h3>
+  <label>Name: <input type="text" id="customName"></label><br><br>
+  <label>Class:
+    <select id="customClass">
+      <option>Detective</option>
+      <option>Bean Wizard</option>
+      <option>Raccoon Whisperer</option>
+      <option>Bureau Agent</option>
+    </select>
+  </label>
 </div>
 
 <!-- SAVE PANEL -->
 <div id="savePanel" class="menuWindow">
   <h3>Save Game</h3>
-  <p>Click save in the menu to store your progress.</p>
+  <p>Your game has been saved.</p>
 </div>
 
 <!-- LOAD PANEL -->
 <div id="loadPanel" class="menuWindow">
   <h3>Load Game</h3>
-  <p>Click load in the menu to restore your progress.</p>
+  <p>Your game has been loaded.</p>
 </div>
 
 <!-- SETTINGS PANEL -->
 <div id="settingsPanel" class="menuWindow">
   <h3>Settings</h3>
-  <p>Audio, visuals, and accessibility options will go here.</p>
+  <label><input type="checkbox" id="settingDarkMode"> Dark Mode</label><br>
+  <label><input type="checkbox" id="settingBigText"> Large Text</label>
 </div>
+
 
     <!-- FLOATING MENU BUTTON -->
     <button id="menuToggle">☰ Menu</button>
