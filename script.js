@@ -207,6 +207,17 @@ document.getElementById("playButton").onclick = () => {
 function restartGame() {
   loadScene("start");
 }
+// COLLAPSIBLE MENU
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const menuPanel = document.getElementById("menuPanel");
+
+  if (menuToggle && menuPanel) {
+    menuToggle.addEventListener("click", () => {
+      menuPanel.classList.toggle("open");
+    });
+  }
+});
 
 
 
