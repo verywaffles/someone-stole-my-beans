@@ -564,5 +564,105 @@
   "endingEatFamiliar": {
     "text": "ENDING: You eat your bean familiar. It was crunchy. You monster.",
     "choices": []
+  },
+  "inventoryTest": {
+    "text": "You find a strange glowing bean shard on a pedestal.",
+    "choices": [
+      { "label": "Pick up the shard", "next": "inventoryTest", "item": "Bean Shard" },
+      { "label": "Proceed deeper into the chamber", "next": "lockedDoor" }
+    ]
+  },
+
+  "lockedDoor": {
+    "text": "A massive stone door blocks your path. A bean-shaped indentation glows faintly.",
+    "choices": [
+      { "label": "Insert the Bean Shard", "next": "doorOpens", "requires": "Bean Shard" },
+      { "label": "Push the door with your bare hands", "next": "endingCoward" }
+    ]
+  },
+
+  "doorOpens": {
+    "text": "The shard fits perfectly. The door rumbles open, revealing a hidden chamber.",
+    "choices": [
+      { "label": "Enter the chamber", "next": "skillTreeIntro" }
+    ]
+  },
+
+  "skillTreeIntro": {
+    "text": "A glowing mural depicts ancient bean techniques. You feel knowledge flowing into you.",
+    "choices": [
+      { "label": "Unlock Bean Sense I", "next": "skillUnlocked", "skill": "beanSense" },
+      { "label": "Unlock Raccoon Diplomacy I", "next": "skillUnlocked", "skill": "raccoonTalk" },
+      { "label": "Ignore the mural", "next": "start" }
+    ]
+  },
+
+  "skillUnlocked": {
+    "text": "You feel a new power awaken within you.",
+    "choices": [
+      { "label": "Continue", "next": "loreIntro" }
+    ]
+  },
+
+  "loreIntro": {
+    "text": "Ancient carvings line the walls. They depict the history of the Bean War.",
+    "choices": [
+      { "label": "Record the carvings", "next": "loreSaved", "lore": "Bean War History" },
+      { "label": "Move on", "next": "mapIntro" }
+    ]
+  },
+
+  "loreSaved": {
+    "text": "You jot down the carvings into your Beanpedia.",
+    "choices": [
+      { "label": "Continue", "next": "mapIntro" }
+    ]
+  },
+
+  "mapIntro": {
+    "text": "A stone map appears on the wall, showing several locations.",
+    "choices": [
+      { "label": "Unlock the Ancient Chamber on your map", "next": "mapSaved", "location": "Ancient Chamber" },
+      { "label": "Ignore the map", "next": "chaosIntro" }
+    ]
+  },
+
+  "mapSaved": {
+    "text": "The map glows. You feel the location imprint itself into your mind.",
+    "choices": [
+      { "label": "Continue", "next": "chaosIntro" }
+    ]
+  },
+
+  "chaosIntro": {
+    "text": "The air crackles. Something chaotic stirs.",
+    "choices": [
+      { "label": "Trigger Chaos Mode", "next": "chaosEvent", "chaos": true },
+      { "label": "Back away slowly", "next": "start" }
+    ]
+  },
+
+  "chaosEvent": {
+    "text": "CHAOS MODE: Reality begins to distort. Raccoons fall from the ceiling. Beans float upward.",
+    "choices": [
+      { "label": "Embrace the chaos", "next": "endingShattered" },
+      { "label": "Try to stabilize reality", "next": "miniGameIntro" }
+    ]
+  },
+
+  "miniGameIntro": {
+    "text": "A glowing puzzle appears before you. Solve it to restore balance.",
+    "choices": [
+      { "label": "Start the memory mini-game", "next": "miniGameStart", "minigame": "memory" },
+      { "label": "Refuse the challenge", "next": "endingCoward" }
+    ]
+  },
+
+  "miniGameStart": {
+    "text": "The mini-game begins...",
+    "choices": [
+      { "label": "Return to the story", "next": "start" }
+    ]
   }
+
 }
