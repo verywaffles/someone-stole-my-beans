@@ -1,7 +1,14 @@
+// ===============================
+// CORE GAME STATE
+// ===============================
 let story = {};
 let currentScene = "start";
 let inventory = [];
 
+
+// ===============================
+// ACHIEVEMENTS
+// ===============================
 const ACHIEVEMENTS = {
   endingVictory: "Bean Hero",
   endingHalfBeans: "Halfway There",
@@ -31,9 +38,12 @@ const ACHIEVEMENTS = {
   endingExplosion: "Spell Gone Wrong",
   endingFamiliar: "Bean Tamer",
   endingEatFamiliar: "Familiar Feast"
-
 };
 
+
+// ===============================
+// ACHIEVEMENT FUNCTIONS
+// ===============================
 function unlockAchievement(endingId) {
   let unlocked = JSON.parse(localStorage.getItem("achievements")) || {};
 
@@ -57,7 +67,6 @@ function showAchievementPopup(name) {
 
 function openAchievements() {
   let unlocked = JSON.parse(localStorage.getItem("achievements")) || {};
-
   let message = "Achievements:\n\n";
 
   for (let id in ACHIEVEMENTS) {
@@ -69,21 +78,61 @@ function openAchievements() {
   alert(message);
 }
 
+
+// ===============================
+// INVENTORY SYSTEM
+// ===============================
+function addItem(item) {
+  if (!inventory.includes(item)) {
+    inventory.push(item);
+    alert("You obtained: " + item);
+    updateInventoryUI();
+  }
+}
+
+function removeItem(item) {
+  inventory = inventory.filter(i => i !== item);
+  updateInventoryUI();
+}
+
+function hasItem(item) {
+  return inventory.includes(item);
+}
+
+function updateInventoryUI() {
+  const list = document.getElementById("inventoryList");
+  if (!list) return;
+
+  list.innerHTML = "";
+
+  inventory.forEach(item => {
+    const li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+  });
+}
+
+
+// ===============================
+// LOAD STORY JSON
+// ===============================
 fetch("story.json")
   .then(res => res.json())
   .then(data => {
     story = data;
-    // Do NOT start the game automatically
-// loadScene(currentScene);
-
   });
 
+
+// ===============================
+// MAIN SCENE LOADER
+// ===============================
 function loadScene(sceneName) {
-  updateInventoryUI ();
+  updateInventoryUI();
+
   const scene = story[sceneName];
   currentScene = sceneName;
 
-  // ⭐ Unlock achievement if this scene is an ending
+  // If this scene is an ending, unlock achievement
   if (ACHIEVEMENTS[sceneName]) {
     unlockAchievement(sceneName);
   }
@@ -93,65 +142,71 @@ function loadScene(sceneName) {
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
 
-scene.choices.forEach(choice => {
+  scene.choices.forEach(choice => {
 
-  // 1. Check item requirements FIRST
-  if (choice.requires && !hasItem(choice.requires)) {
-    return; // skip this choice
-  }
-
-  // 2. Create the button
-  const btn = document.createElement("button");
-  btn.innerText = choice.label;
-
-  // 3. Handle item rewards
-  btn.onclick = () => {
-    if (choice.item) {
-      addItem(choice.item);
+    // Hide choices requiring items the player doesn't have
+    if (choice.requires && !hasItem(choice.requires)) {
+      return;
     }
 
-    if (ACHIEVEMENTS[choice.next]) {
-      goToEnding(choice.next);
-    } else {
-      loadScene(choice.next);
-    }
-  };
+    const btn = document.createElement("button");
+    btn.innerText = choice.label;
 
-  // 4. Add button to the page
-  choicesDiv.appendChild(btn);
-});
+    btn.onclick = () => {
 
+      // Give item if this choice grants one
+      if (choice.item) {
+        addItem(choice.item);
+      }
+
+      // If next is an ending, handle ending
+      if (ACHIEVEMENTS[choice.next]) {
+        goToEnding(choice.next);
+      } else {
+        loadScene(choice.next);
+      }
+    };
+
+    choicesDiv.appendChild(btn);
+  });
+}
+
+
+// ===============================
+// ENDING HANDLER
+// ===============================
+function goToEnding(id) {
+  const ending = story[id];
+
+  document.getElementById("text").innerText = ending.text;
+
+  const choicesDiv = document.getElementById("choices");
+  choicesDiv.innerHTML = "";
+
+  const restartBtn = document.createElement("button");
+  restartBtn.innerText = "Restart";
+  restartBtn.onclick = () => loadScene("start");
+
+  choicesDiv.appendChild(restartBtn);
+}
+
+
+// ===============================
+// GAME START BUTTON
+// ===============================
 document.getElementById("playButton").onclick = () => {
   document.getElementById("titleScreen").style.display = "none";
   document.getElementById("gameScreen").style.display = "block";
   loadScene("start");
 };
+
+
+// ===============================
+// RESTART FUNCTION
+// ===============================
 function restartGame() {
   loadScene("start");
 }
-function addItem(item) {
-  if (!inventory.includes(item)) {
-    inventory.push(item);
-    alert("You obtained: " + item);
-  }
-}
 
-function removeItem(item) {
-  inventory = inventory.filter(i => i !== item);
-}
-
-function hasItem(item) {
-  return inventory.includes(item);
-}
-function updateInventoryUI() {
-  const list = document.getElementById("inventoryList");
-  list.innerHTML = "";
-
-  inventory.forEach(item => {
-    const li = document.createElement("li");
-    li.innerText = item;
-    list.appendChild(li);
-  });
-}
 
 
