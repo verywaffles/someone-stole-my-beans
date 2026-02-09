@@ -1,4 +1,4 @@
-// ===============================
+ // ===============================
 // CORE GAME STATE
 // ===============================
 let story = {};
@@ -182,124 +182,97 @@ function goToEnding(id) {
 
 
 // ===============================
-// GAME START BUTTON
+// SKILL TREE SYSTEM
 // ===============================
-document.getElementById("playButton").onclick = () => {
-  document.getElementById("titleScreen").style.display = "none";
-  document.getElementById("gameScreen").style.display = "block";
-  loadScene("start");
-};
+let skillPoints = 3;
+let unlockedSkills = JSON.parse(localStorage.getItem("skills")) || {};
 
+function updateSkillTreeUI() {
+  const display = document.getElementById("skillPointsDisplay");
+  if (display) display.innerText = "Skill Points: " + skillPoints;
 
-// ===============================
-// RESTART FUNCTION
-// ===============================
-function restartGame() {
-  loadScene("start");
+  document.querySelectorAll(".skill").forEach(skill => {
+    const id = skill.dataset.skill;
+
+    if (unlockedSkills[id]) {
+      skill.classList.add("unlocked");
+      const btn = skill.querySelector("button");
+      if (btn) {
+        btn.innerText = "Unlocked";
+        btn.disabled = true;
+      }
+    }
+  });
 }
 
 
 // ===============================
-// MENU + INVENTORY PANEL TOGGLES
+// DOMContentLoaded — ALL UI LOGIC
 // ===============================
 document.addEventListener("DOMContentLoaded", () => {
-// ===============================
-// MENU WINDOW TOGGLER
-// ===============================
-function togglePanel(id) {
-  // Close all other panels
-  document.querySelectorAll(".menuWindow").forEach(p => p.classList.remove("open"));
 
-  // Toggle the selected one
-  const panel = document.getElementById(id);
-  panel.classList.toggle("open");
-}
+  // PLAY BUTTON
+  document.getElementById("playButton").onclick = () => {
+    document.getElementById("titleScreen").style.display = "none";
+    document.getElementById("gameScreen").style.display = "block";
+    loadScene("start");
+  };
 
+  // MENU PANEL
+  const menuToggle = document.getElementById("menuToggle");
+  const menuPanel = document.getElementById("menuPanel");
+  menuToggle.addEventListener("click", () => {
+    menuPanel.classList.toggle("open");
+  });
 
-// ===============================
-// SKILL TREE
-// ===============================
-document.getElementById("skillTreeButton").onclick = () => {
-  togglePanel("skillTreePanel");
-};
+  // INVENTORY PANEL
+  const inventoryToggle = document.getElementById("inventoryToggle");
+  const inventoryPanel = document.getElementById("inventoryPanel");
+  inventoryToggle.addEventListener("click", () => {
+    inventoryPanel.classList.toggle("open");
+  });
 
-
-// ===============================
-// BEANPEDIA
-// ===============================
-document.getElementById("loreButton").onclick = () => {
-  togglePanel("lorePanel");
-};
-
-
-// ===============================
-// MAP
-// ===============================
-document.getElementById("mapButton").onclick = () => {
-  togglePanel("mapPanel");
-};
-
-
-// ===============================
-// CHAOS MODE
-// ===============================
-document.getElementById("chaosButton").onclick = () => {
-  togglePanel("chaosPanel");
-};
-
-
-// ===============================
-// CUSTOMIZE
-// ===============================
-document.getElementById("customizeButton").onclick = () => {
-  togglePanel("customizePanel");
-};
-
-
-// ===============================
-// SAVE GAME
-// ===============================
-document.getElementById("saveButton").onclick = () => {
-  togglePanel("savePanel");
-
-  // Save data
-  localStorage.setItem("saveData", JSON.stringify({
-    scene: currentScene,
-    inventory: inventory,
-    skills: unlockedSkills,
-    skillPoints: skillPoints
-  }));
-};
-
-
-// ===============================
-// LOAD GAME
-// ===============================
-document.getElementById("loadButton").onclick = () => {
-  togglePanel("loadPanel");
-
-  const data = JSON.parse(localStorage.getItem("saveData"));
-  if (!data) {
-    alert("No save found!");
-    return;
+  // GENERIC PANEL TOGGLER
+  function togglePanel(id) {
+    document.querySelectorAll(".menuWindow").forEach(p => p.classList.remove("open"));
+    document.getElementById(id).classList.toggle("open");
   }
 
-  inventory = data.inventory || [];
-  unlockedSkills = data.skills || {};
-  skillPoints = data.skillPoints || 0;
+  // MENU BUTTONS
+  document.getElementById("skillTreeButton").onclick = () => togglePanel("skillTreePanel");
+  document.getElementById("loreButton").onclick = () => togglePanel("lorePanel");
+  document.getElementById("mapButton").onclick = () => togglePanel("mapPanel");
+  document.getElementById("chaosButton").onclick = () => togglePanel("chaosPanel");
+  document.getElementById("customizeButton").onclick = () => togglePanel("customizePanel");
+  document.getElementById("saveButton").onclick = () => togglePanel("savePanel");
+  document.getElementById("loadButton").onclick = () => togglePanel("loadPanel");
+  document.getElementById("settingsButton").onclick = () => togglePanel("settingsPanel");
 
-  loadScene(data.scene);
-  updateInventoryUI();
+  // SKILL TREE BUTTONS
+  document.querySelectorAll(".unlockSkill").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const skillDiv = btn.closest(".skill");
+      const skillId = skillDiv.dataset.skill;
+
+      let cost = 1;
+      if (skillId === "bureauTraining") cost = 2;
+      if (skillId === "raccoonAffinity") cost = 3;
+
+      if (skillPoints < cost) {
+        alert("Not enough skill points!");
+        return;
+      }
+
+      skillPoints -= cost;
+      unlockedSkills[skillId] = true;
+
+      localStorage.setItem("skills", JSON.stringify(unlockedSkills));
+
+      updateSkillTreeUI();
+    });
+  });
+
   updateSkillTreeUI();
-};
-
-
-// ===============================
-// SETTINGS
-// ===============================
-document.getElementById("settingsButton").onclick = () => {
-  togglePanel("settingsPanel");
-};
-
+});
 
 
