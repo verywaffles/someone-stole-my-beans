@@ -1,5 +1,6 @@
 let story = {};
 let currentScene = "start";
+let inventory = [];
 
 const ACHIEVEMENTS = {
   endingVictory: "Bean Hero",
@@ -105,6 +106,20 @@ document.getElementById("playButton").onclick = () => {
 };
 function restartGame() {
   loadScene("start");
+}
+function addItem(item) {
+  if (!inventory.includes(item)) {
+    inventory.push(item);
+    alert("You obtained: " + item);
+  }
+}
+
+function removeItem(item) {
+  inventory = inventory.filter(i => i !== item);
+}
+
+function hasItem(item) {
+  return inventory.includes(item);
 }
 
 
