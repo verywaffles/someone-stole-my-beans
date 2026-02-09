@@ -419,24 +419,16 @@ button:hover {
 
 #gameButtons {
   position: fixed;
-  bottom: 0;
+  bottom: 0;        /* anchors to bottom of the page */
   left: 0;
   width: 100%;
-  background-color: rgba(247, 242, 232, 0.95);
-  border-top: left: 0;
-  width: 100%;
-  background-color: rgba(247, 242, 232, 0.95);
+  background-color: #f7f2e8;
   border-top: 2px solid #d1b892;
   padding: 12px;
   display: flex;
   justify-content: center;
   gap: 12px;
-  z-index 2px solid #d1b892;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  z-index: 9999;
+  z-index: 9999;    /* keeps it above everything else */
 }
 
 
