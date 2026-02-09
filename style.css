@@ -232,20 +232,6 @@ button:hover {
   80% { opacity: 1; }
   100% { opacity: 0; }
 }
-#gameButtons {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f7f2e8;
-  border-top: 2px solid #d1b892;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  z-index: 1000;
-}
-
 
 
 
