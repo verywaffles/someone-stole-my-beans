@@ -203,115 +203,103 @@ function restartGame() {
 // MENU + INVENTORY PANEL TOGGLES
 // ===============================
 document.addEventListener("DOMContentLoaded", () => {
+// ===============================
+// MENU WINDOW TOGGLER
+// ===============================
 function togglePanel(id) {
+  // Close all other panels
   document.querySelectorAll(".menuWindow").forEach(p => p.classList.remove("open"));
+
+  // Toggle the selected one
   const panel = document.getElementById(id);
   panel.classList.toggle("open");
 }
 
+
+// ===============================
 // SKILL TREE
+// ===============================
 document.getElementById("skillTreeButton").onclick = () => {
   togglePanel("skillTreePanel");
 };
 
+
+// ===============================
 // BEANPEDIA
+// ===============================
 document.getElementById("loreButton").onclick = () => {
   togglePanel("lorePanel");
 };
 
+
+// ===============================
 // MAP
+// ===============================
 document.getElementById("mapButton").onclick = () => {
   togglePanel("mapPanel");
 };
 
+
+// ===============================
 // CHAOS MODE
+// ===============================
 document.getElementById("chaosButton").onclick = () => {
   togglePanel("chaosPanel");
 };
 
+
+// ===============================
 // CUSTOMIZE
+// ===============================
 document.getElementById("customizeButton").onclick = () => {
   togglePanel("customizePanel");
 };
 
-// SAVE
+
+// ===============================
+// SAVE GAME
+// ===============================
 document.getElementById("saveButton").onclick = () => {
   togglePanel("savePanel");
+
+  // Save data
+  localStorage.setItem("saveData", JSON.stringify({
+    scene: currentScene,
+    inventory: inventory,
+    skills: unlockedSkills,
+    skillPoints: skillPoints
+  }));
 };
 
-// LOAD
+
+// ===============================
+// LOAD GAME
+// ===============================
 document.getElementById("loadButton").onclick = () => {
   togglePanel("loadPanel");
+
+  const data = JSON.parse(localStorage.getItem("saveData"));
+  if (!data) {
+    alert("No save found!");
+    return;
+  }
+
+  inventory = data.inventory || [];
+  unlockedSkills = data.skills || {};
+  skillPoints = data.skillPoints || 0;
+
+  loadScene(data.scene);
+  updateInventoryUI();
+  updateSkillTreeUI();
 };
 
+
+// ===============================
 // SETTINGS
+// ===============================
 document.getElementById("settingsButton").onclick = () => {
   togglePanel("settingsPanel");
 };
-
-  // MENU PANEL
-  const menuToggle = document.getElementById("menuToggle");
-  const menuPanel = document.getElementById("menuPanel");
-
-  menuToggle.addEventListener("click", () => {
-    menuPanel.classList.toggle("open");
-  });
-
-  // INVENTORY PANEL
-  const inventoryToggle = document.getElementById("inventoryToggle");
-  const inventoryPanel = document.getElementById("inventoryPanel");
-
-  inventoryToggle.addEventListener("click", () => {
-    inventoryPanel.classList.toggle("open");
-  });
-
-
-  // ===============================
-  // MENU BUTTON ACTIONS
-  // ===============================
-
-  document.getElementById("skillTreeButton").onclick = () => {
-    alert("Skill Tree coming soon!");
-  };
-
-  document.getElementById("loreButton").onclick = () => {
-    alert("Beanpedia coming soon!");
-  };
-
-  document.getElementById("mapButton").onclick = () => {
-    alert("Map coming soon!");
-  };
-
-  document.getElementById("chaosButton").onclick = () => {
-    alert("Chaos Mode toggled!");
-  };
-
-  document.getElementById("customizeButton").onclick = () => {
-    alert("Character customization coming soon!");
-  };
-
-  document.getElementById("saveButton").onclick = () => {
-    localStorage.setItem("saveData", JSON.stringify({
-      scene: currentScene,
-      inventory: inventory
-    }));
-    alert("Game saved!");
-  };
-
-  document.getElementById("loadButton").onclick = () => {
-    const data = JSON.parse(localStorage.getItem("saveData"));
-    if (!data) return alert("No save found!");
-
-    inventory = data.inventory;
-    loadScene(data.scene);
-    alert("Game loaded!");
-  };
-
-  document.getElementById("settingsButton").onclick = () => {
-    alert("Settings coming soon!");
-  };
-
-});
 
 
 
