@@ -332,6 +332,12 @@ function goToEnding(id) {
 
   choicesDiv.appendChild(restartBtn);
 }
+// ===============================
+// RESTART BUTTON (MAIN ONE)
+// ===============================
+function restartGame() {
+  loadScene("start");
+}
 
 
 // ===============================
