@@ -42,9 +42,7 @@ const ACHIEVEMENTS = {
 
 // ===============================
 // ACHIEVEMENT FUNCTIONS
-// ===============================
-function unlockAchievement(endingId) {
-  let ACHIEVEMENT FUNCTIONS
+// ==============================
 // ===============================
 function unlockAchievement(endingId) {
   let unlocked = JSON.parse(localStorage.getItem("achievements")) || {};
