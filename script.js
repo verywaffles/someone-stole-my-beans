@@ -798,6 +798,15 @@ document.addEventListener("DOMContentLoaded", () => {
     settingsPanel.appendChild(document.createElement("br"));
     settingsPanel.appendChild(applyBtn);
   }
+function updateRPC(state, details) {
+  fetch("http://localhost:6969/update", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ state, details })
+  }).catch(() => {
+    // Helper app might not be running; ignore errors
+  });
+}
 
   updateInventoryUI();
   updateLoreUI();

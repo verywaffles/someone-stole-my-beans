@@ -23,3 +23,7 @@ firebase-debug.log
 .env.local
 .env.*.local
 
+# Local RPC helper app (DO NOT COMMIT)
+rpc-helper/
+
+
